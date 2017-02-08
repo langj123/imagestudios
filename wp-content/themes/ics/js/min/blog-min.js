@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){var o=$(".current-cat");o&&o.on("click",function(){return blogUrl="blog",console.log(window.location.origin),window.location=window.location.origin+"/"+blogUrl,!1})});

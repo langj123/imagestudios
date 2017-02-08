@@ -1,0 +1,174 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylesheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+/* FUTUREM */
+#header_futurem {
+	height: 490px;
+}
+#futurem_logo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+
+/* END FUTUREM */
+.navbar-fixed-top {
+	position: fixed;
+}
+.error404 {
+	#content {min-height:300px; padding-top: 200px;}
+}
+.home {
+	#home {
+		h1 {font-size: 5.3em;}
+	}
+  #portfolio {
+    .grid-item {
+  	  width: 25%;
+    }
+  }
+  #work {
+    h1 {font-size: 5em;}
+		.intro-text {max-width: 60%;}
+  }
+	#client-wrap {
+		width: 85%;
+		margin: 0 12.5%;
+	}
+  #process {
+    .center {
+      width: 986px;
+			&.process-text {width: 865px;}
+      .bigcircle {
+        width: 380px;
+        height: 380px;
+        border-radius: 190px;
+        margin-left: -80px;
+        line-height: 380px;
+        font-size: 20px;
+        .transition(all, .4s);
+        &.first {margin-left: 0;}
+      }
+    }
+  }
+	#whoweare {
+		#staff-wrapper {
+			width: 1000px;
+			margin: 0 auto;
+			clear: both;
+      .fourcol {
+				width:30.7%;
+        .transition(all, .2s);
+        &:after {
+          content:url('/img/staff/bolthover.png');
+          opacity:0;
+          position: absolute;
+          top: 0;
+          right: 19%;
+        }
+        &:hover:after {
+          opacity: .8;
+        }
+			}
+		}
+	}
+  #about {
+		#grayboxes {
+			#talk {
+				h2 {
+					font-size: 4em;
+				}
+			}
+      #philosophy {
+        @philosize: 360px;
+        @circle-x: @philosize / 4;
+        @circle-y: @philosize / 3;
+
+        #circle-wrap {
+          width: @philosize * 1.2;
+          height: @philosize;
+        }
+        .bigcircle {
+          height: @circle-y * 2;
+          width: @circle-y * 2;
+          line-height: @circle-y * 2;
+          font-size: 16px;
+        }
+        #circle1 {
+          left: @circle-x * 1.05;
+        }
+        #circle2, #circle3 {
+          top: @circle-y * 1.39;
+        }
+        #circle2 {
+          left:  @circle-x * 6/12;
+        }
+        #circle3 {
+          left: (@circle-x * 3) * (11 / 12);
+        }
+      }
+		}
+  }
+}
+
+.blog, .single, .category, .archive {
+	.navbar-inner .container {width:80%;}
+	article {
+		header, .entry-content {padding-left: 18px;}
+	}
+	#content {
+		width: 80%;
+		padding: 0 10%;
+		margin-top:76px;
+	}
+	#posttime {
+		left: -100px;
+		top: 0px;
+		width: 94px;
+		span {font-size: 65px; line-height: 65px;}
+	}
+	#respond {padding-left: 18px;}
+	#categories-2 {h3 {font-size: 3em;}}
+}
+
+footer {
+  #copyright, #footer-wrap {
+    width: 80%;
+		margin: 0 auto;
+  }
+  #footer-wrap {
+		padding: 0 10%;
+  }
+  #copyright {
+    padding: .2em 10%;
+  }
+	#callout {
+		width: 44.055249%;
+	}
+}
+
+.home .footer {
+  #copyright, #footer-wrap {
+    width: 90%;
+  }
+  #footer-wrap {
+    padding: 0 5%;
+  }
+  #copyright {
+    padding: .2em 5%;
+  }
+}
+
+.page-template-work-php {
+  #content {
+    margin-top: 76px;
+	}
+}

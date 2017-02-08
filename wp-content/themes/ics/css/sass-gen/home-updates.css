@@ -1,0 +1,261 @@
+/* Welcome to Compass.
+*/
+/* heights for items */
+.yellow-button {
+  font-family: "Montserrat", sans-serif;
+  padding-left: 25px;
+  padding-right: 25px;
+  color: #454545; }
+  .yellow-button:hover {
+    cursor: pointer; }
+
+.fourcol {
+  padding-top: 35px; }
+
+.home #process .center .bigcircle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px; }
+  @media screen and (max-width: 768px) {
+    .home #process .center .bigcircle {
+      font-size: 17px; } }
+
+.home #whoweare #who-wrapper p {
+  font-size: 18px;
+  line-height: 30px; }
+  @media screen and (max-width: 768px) {
+    .home #whoweare #who-wrapper p.sixcol:first-of-type {
+      padding-bottom: 0;
+      margin-bottom: 0; } }
+.home #whoweare #who-wrapper .firstword {
+  font-family: "freight-sans-pro", sans-serif;
+  font-size: 66px;
+  padding: 0 10px 0 0;
+  line-height: 59px; }
+.home #whoweare ul.sixcol li {
+  padding-bottom: 10px; }
+.home #whoweare ul.sixcol.first li {
+  text-align: right; }
+  @media screen and (max-width: 768px) {
+    .home #whoweare ul.sixcol.first li {
+      text-align: center; } }
+.home #whoweare ul.sixcol.last li {
+  text-align: left; }
+  @media screen and (max-width: 768px) {
+    .home #whoweare ul.sixcol.last li {
+      text-align: center; } }
+
+.home #process .process-text {
+  overflow: hidden;
+  padding-top: 25px; }
+  .home #process .process-text p {
+    text-align: left;
+    border-top: 1px solid #dadada;
+    padding-top: 10px; }
+    @media screen and (max-width: 768px) {
+      .home #process .process-text p {
+        border-top: none; } }
+
+.home #philosophy h3 {
+  font-family: "TradeGothicLTCom-BdCn20", sans-serif;
+  font-weight: normal;
+  line-height: 1em; }
+
+.home #main {
+  background: #ffc328;
+  height: auto;
+  position: absolute;
+  top: 0; }
+
+.head-cont h1 span {
+  display: inline-block;
+  min-width: 300px;
+  position: relative;
+  line-height: 72px; }
+  .head-cont h1 span:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 4px;
+    background: #000; }
+
+.head-cont h1 span:hover, .head-cont h1 span.active {
+  background: black;
+  color: white; }
+
+.home .main-head {
+  height: 100vh; }
+  .home .main-head:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle; }
+  .home .main-head .head-cont {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 175px 0 100px; }
+  .home .main-head .head-cont h1 {
+    color: #000;
+    text-align: left;
+    font-size: 75px;
+    line-height: 85px; }
+  .home .main-head .head-cont h2 {
+    color: white;
+    font-size: 24px;
+    text-align: left; }
+
+.feature-client {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  background-size: cover;
+  opacity: 0;
+  -moz-transition-property: opacity, -moz-transform;
+  -o-transition-property: opacity, -o-transform;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -moz-transition-timing-function: steps(4);
+  -o-transition-timing-function: steps(4);
+  -webkit-transition-timing-function: steps(4);
+  transition-timing-function: steps(4); }
+  .feature-client.toggled {
+    opacity: 1; }
+  .feature-client .feat-cont {
+    width: calc(50% - 160px);
+    padding: 0 100px 0 60px;
+    background: #6acbe5; }
+    .feature-client .feat-cont .feat-title {
+      color: white;
+      font-size: 75px;
+      line-height: 88px;
+      position: relative; }
+      .feature-client .feat-cont .feat-title span {
+        display: inline;
+        box-shadow: inset 0 -4px 0 white; }
+    .feature-client .feat-cont .feat-desc {
+      color: white;
+      font-size: 28px; }
+    .feature-client .feat-cont:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle; }
+    .feature-client .feat-cont .vert-cent {
+      vertical-align: middle;
+      display: inline-block; }
+
+/* Individual client sections, based off id. */
+#Feat-new_england_school_of_photography .feat-cont {
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s; }
+#Feat-new_england_school_of_photography .feat-cont.toggled {
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -webkit-transform: translateX(0);
+  transform: translateX(0); }
+
+#Feat-47_brand.feature-client {
+  -moz-transition-property: opacity, -moz-transform;
+  -o-transition-property: opacity, -o-transform;
+  -webkit-transition-property: opacity, -webkit-transform;
+  transition-property: opacity, transform;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear; }
+#Feat-47_brand .feat-cont {
+  position: relative;
+  background: transparent;
+  padding: 0;
+  width: 50%;
+  text-align: center; }
+  #Feat-47_brand .feat-cont .feat-title {
+    margin-top: 0; }
+  #Feat-47_brand .feat-cont .vert-cent {
+    position: relative;
+    text-align: center;
+    width: 420px;
+    padding: 0 40px;
+    z-index: 1;
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -moz-transition-property: -moz-transform, opacity;
+    -o-transition-property: -o-transform, opacity;
+    -webkit-transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
+    -moz-transition-duration: 0.4s;
+    -o-transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s; }
+    #Feat-47_brand .feat-cont .vert-cent:after {
+      content: "";
+      background: #3ecc64;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      border-radius: 100%;
+      width: 500px;
+      height: 500px;
+      background: pink;
+      z-index: -1; }
+  #Feat-47_brand .feat-cont.toggled .vert-cent {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+
+#Feat-ginkgo_bioworks:before {
+  content: "";
+  position: absolute;
+  background-image: inherit;
+  background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9Ii0wLjAyNDc2MyIgeTE9IjAuNDcyNDk4IiB4Mj0iMS4wMjQ3NjMiIHkyPSIwLjUyNzUwMiI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzJhNjU3NSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzIzMzY0YyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background: -moz-linear-gradient(357deg, #2a6575, #23364c);
+  background: -webkit-linear-gradient(357deg, #2a6575, #23364c);
+  background: linear-gradient(93deg, #2a6575, #23364c);
+  width: 100%;
+  height: 100%;
+  z-index: 0; }
+#Feat-ginkgo_bioworks.feature-client {
+  position: relative; }
+#Feat-ginkgo_bioworks:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 299vw;
+  z-index: 0; }
+#Feat-ginkgo_bioworks .feat-cont {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  background: transparent;
+  text-align: center;
+  z-index: 2; }

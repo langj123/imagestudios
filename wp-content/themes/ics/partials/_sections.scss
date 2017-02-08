@@ -1,0 +1,72 @@
+.fourcol {
+	padding-top: 35px;
+}
+.home #process .center .bigcircle {
+	font-family: $cta-family;
+	font-size: $font-size * 1.5;
+	@media screen and (max-width: 768px) {
+		font-size: $font-size * .85;
+	}
+}
+.home #whoweare {
+	#who-wrapper {
+		p {
+			font-size: $font-size * .9;
+			line-height: $font-size * 1.5;
+			@media screen and (max-width: 768px) {
+				&.sixcol:first-of-type {
+					padding-bottom: 0;
+					margin-bottom: 0;
+				}
+			}
+		}
+		.firstword {
+			font-family: $header-font-family;
+			font-size: $font-size * 3.3;
+			padding: 0 10px 0 0;
+			line-height: $font-size * 2.95;
+		}
+	}
+	ul.sixcol {
+		li {
+			padding-bottom: 10px;
+		}
+		&.first {
+			li {
+				text-align: right;
+				@media screen and (max-width: 768px) {
+					text-align: center;
+				}
+			}
+		}
+		&.last {
+			li {
+				text-align: left;
+				@media screen and (max-width: 768px) {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+.home #process {
+	.process-text {
+		overflow: hidden;
+		padding-top: 25px;
+		p {
+			text-align: left;
+			border-top: 1px solid #dadada;
+			padding-top: 10px;
+			@media screen and (max-width: 768px) {
+				border-top: none;
+			}
+		}
+	}
+}
+.home #philosophy {
+	h3 {
+		font-family: $header-font-family-2;
+		font-weight: normal;
+		line-height: 1em;
+	}
+}

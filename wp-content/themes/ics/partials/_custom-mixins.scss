@@ -1,0 +1,18 @@
+@mixin bottom-partial-border($width, $margin-top) {
+	content: "";
+	display: block;
+	width: $width;
+	height: 2px;
+	background: $ics-color;
+	margin: $margin-top auto 0;
+}
+@mixin clear-float() {
+	&:after {
+		content: "";
+		display: table;
+		width: 100%;
+		clear: both;
+		height: 1px;
+		position: relative;
+	}
+}

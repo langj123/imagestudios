@@ -1,0 +1,4162 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+******************************************************************/
+/*! normalize.css 2012-07-07T09:50 UTC - http://github.com/necolas/normalize.css */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE6/7/8/9 & FF3.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+/*
+ * Corrects `inline-block` display not defined in IE6/7/8/9 & FF3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/*
+ * Addresses styling for `hidden` attribute not present in IE7/8/9, FF3, S4.
+ * Known issue: no IE6 support.
+ */
+[hidden] {
+  display: none;
+}
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/*
+ * Addresses margins handled incorrectly in IE6/7.
+ */
+body {
+  margin: 0;
+}
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ * people.opera.com/patrickl/experiments/keyboard/test
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE6/7.
+ * Addresses font sizes within `section` and `article` in FF4+, Chrome, S5.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+/*
+ * Addresses styling not present in IE7/8/9, S5, Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/*
+ * Addresses style set to `bolder` in FF3+, S4/5, Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+blockquote {
+  margin: 1em 40px;
+}
+/*
+ * Addresses styling not present in S5, Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/*
+ * Addresses styling not present in IE6/7/8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+p,
+pre {
+  margin: 1em 0;
+}
+/*
+ * Corrects font family set oddly in IE6, S4/5, Chrome.
+ * en.wikipedia.org/wiki/User:Davidgothberg/Test59
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em;
+}
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+/*
+ * Addresses CSS quotes not supported in IE6/7.
+ */
+q {
+  quotes: none;
+}
+/*
+ * Addresses `quotes` property not supported in S4.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+small {
+  font-size: 75%;
+}
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ * gist.github.com/413930
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+/*
+ * Addresses paddings set differently in IE6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+/*
+ * Corrects list images handled incorrectly in IE7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside `a` element in IE6/7/8/9, FF3.
+ * 2. Improves image quality when scaled in IE7.
+ *    code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+/*
+ * Corrects overflow displayed oddly in IE9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE6/7/8/9, S5, O11.
+ */
+figure {
+  margin: 0;
+}
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE6/7.
+ */
+form {
+  margin: 0;
+}
+/*
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/*
+ * 1. Corrects color not being inherited in IE6/7/8/9.
+ * 2. Corrects text not wrapping in FF3.
+ * 3. Corrects alignment displayed oddly in IE6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+/*
+ * 1. Corrects font size not being inherited in all browsers.
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+/*
+ * Addresses FF3/4 setting `line-height` on `input` using `!important` in the
+ * UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Removes inner spacing in IE7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+/*
+ * 1. Addresses box sizing set to content-box in IE8/9.
+ * 2. Removes excess padding in IE8/9.
+ * 3. Removes excess padding in IE7.
+ *    Known issue: excess padding remains in IE6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+/*
+ * 1. Addresses `appearance` set to `searchfield` in S5, Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in S5, Chrome (include `-moz`
+ *    to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+/*
+ * Removes inner padding and search cancel button in S5, Chrome on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/*
+ * Removes inner padding and border in FF3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/*
+ * 1. Removes default vertical scrollbar in IE6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/******************************************************************
+CUSTOMIZED RESET VALUES
+I added these extra styles as a more personalized reset. Feel free
+to remove them if you like or add your own. If you want to update
+the normalize styles, make sure to edit from this point up.
+******************************************************************/
+ul,
+ol {
+  padding: 0;
+  list-style-type: none;
+}
+dd {
+  margin: 0;
+}
+.sidebar ul,
+.sidebar ol,
+.commentlist {
+  list-style: none;
+}
+/* proper formatting (http://blog.fontdeck.com/post/9037028497/hyphens) */
+p {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -epub-hyphens: auto;
+  hyphens: auto;
+}
+b,
+strong,
+.strong {
+  font-weight: bold;
+}
+dfn,
+em,
+.em {
+  font-style: italic;
+}
+small,
+.small {
+  font-size: 75%;
+}
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of LESS' great features: 
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques like box shadow and
+border-radius.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more. 
+
+******************************************************************/
+/*********************
+CLEARFIXIN'
+*********************/
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix {
+  /* for IE */
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*********************
+TOOLS
+*********************/
+.t {
+  letter-spacing: 4px;
+}
+/* http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ */
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.center {
+  margin: 0 auto;
+  width: auto;
+}
+.facebook img,
+.twitter img,
+.pinterest img,
+.instagram img {
+  background: url(/img/Facebook-black.png);
+  background-repeat: no-repeat;
+  height: 26px;
+  width: 26px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.facebook img:hover,
+.twitter img:hover,
+.pinterest img:hover,
+.instagram img:hover {
+  background: url(/img/Facebook-white.png);
+}
+.twitter img {
+  background: url(/img/Twitter-black.png);
+}
+.twitter img:hover {
+  background: url(/img/Twitter-white.png);
+}
+.pinterest img {
+  background: url(/img/Pinterest-black.png);
+}
+.pinterest img:hover {
+  background: url(/img/Pinterest-white.png);
+}
+.instagram img {
+  background: url(/img/Instagram-black.png);
+}
+.instagram img:hover {
+  background: url(/img/Instagram-white.png);
+}
+#nextarrow {
+  background: #ffc426;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+}
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+.lightgray {
+  background: #efefef;
+}
+.darkgray {
+  background: #666;
+}
+.midgray {
+  background: #757575;
+}
+.black {
+  color: #454545;
+}
+.yellow {
+  color: #ffc426;
+}
+.underline {
+  text-decoration: underline;
+}
+.highlight-color {
+  color: #ffc426;
+}
+/*********************
+SHAPES
+*********************/
+.bigcircle {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  font-size: 20px;
+  color: #222;
+  line-height: 300px;
+  text-align: center;
+  background: #f2b000;
+  opacity: .7;
+  float: left;
+  margin-left: -50px;
+}
+/*********************
+TYPOGRAPHY
+*********************/
+@font-face {
+  font-family: 'TradeGothicLT-CondEighteen';
+  src: url('/css/webfonts/2895CF_0_0.eot');
+  src: url('/css/webfonts/2895CF_0_0.eot?#iefix') format('embedded-opentype'), url('/css/webfonts/2895CF_0_0.woff') format('woff'), url('/css/webfonts/2895CF_0_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'TradeGothicLTCom-BdCn20';
+  src: url('/css/webfonts/2895CF_1_0.eot');
+  src: url('/css/webfonts/2895CF_1_0.eot?#iefix') format('embedded-opentype'), url('/css/webfonts/2895CF_1_0.woff') format('woff'), url('/css/webfonts/2895CF_1_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'TradeGothicLT-Bold';
+  src: url('/css/webfonts/2895CF_2_0.eot');
+  src: url('/css/webfonts/2895CF_2_0.eot?#iefix') format('embedded-opentype'), url('/css/webfonts/2895CF_2_0.woff') format('woff'), url('/css/webfonts/2895CF_2_0.ttf') format('truetype');
+}
+.thirsty {
+  font-family: 'ThirstyScriptRegular', Georgia;
+}
+/* 
+use the best ampersand 
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+  font-style: italic;
+}
+/* text alignment */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+/* alerts & notices */
+.alert {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+}
+.help {
+  border-color: #e8dc59;
+  background: #ebe16f;
+}
+.info {
+  border-color: #bfe4f4;
+  background: #d5edf8;
+}
+.error {
+  border-color: #f8cdce;
+  background: #fbe3e4;
+}
+.success {
+  border-color: #deeaae;
+  background: #e6efc2;
+}
+/*********************
+BORDER RADIUS
+*********************/
+/* 
+NOTE: For older browser support (and some mobile), 
+don't use the shorthand to define *different* corners. 
+
+USAGE: .rounded(4px); 
+
+*/
+/* 
+Instead of having a seperate mixin for the different
+borders, we're using the mixin from 320 & Up to make
+things easier to use.
+
+USAGE: .border-radius(4px,4px,0,0);
+
+*/
+/*********************
+TRANISTION
+*********************/
+/* .transition(all,2s); */
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can 
+really slow down your CSS. Don't overdue it.
+*********************/
+/* .css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* .boxSizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So 
+probably best not to use it. I mean, were you going to anyway? */
+/*********************
+BOX SHADOW
+*********************/
+/* .boxShadow(0 0 4px #444); */
+/*********************
+BUTTONS
+*********************/
+.yellow-button,
+.yellow-button:visited,
+.pager a,
+.pager a:visited {
+  padding: 12px 12px 12px;
+  font-size: 14px;
+  background: #ffc426;
+  font-family: 'MCMHellenicWide', Georgia;
+  color: #222;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.yellow-button:hover,
+.yellow-button:visited:hover,
+.pager a:hover,
+.pager a:visited:hover {
+  color: #454545;
+  text-decoration: none;
+  background: #ffd259;
+}
+.ie .yellow-button,
+.ie .yellow-button:visited,
+.win .yellow-button,
+.win .yellow-button:visited,
+.win .pager a,
+.win .pager a:visited {
+  padding-top: 0px;
+}
+.button,
+.button:visited {
+  border: 1px solid #be0d37;
+  border-top-color: #db0f3f;
+  border-left-color: #db0f3f;
+  padding: 4px 12px;
+  color: #fff;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  margin-bottom: 20px;
+  line-height: 21px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #e40f42;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f01d4f), to(#e40f42));
+  background-image: -webkit-linear-gradient(top, #f01d4f, #e40f42);
+  background-image: -moz-linear-gradient(top, #f01d4f, #e40f42);
+  background-image: -o-linear-gradient(top, #f01d4f, #e40f42);
+  background-image: linear-gradient(to bottom, #f01d4f, #e40f42);
+}
+.button:hover,
+.button:visited:hover,
+.button:focus,
+.button:visited:focus {
+  color: #fff;
+  border: 1px solid #be0d37;
+  border-top-color: #9d0a2d;
+  border-left-color: #9d0a2d;
+  background-color: #cc0e3b;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e40f42), to(#cc0e3b));
+  background-image: -webkit-linear-gradient(top, #e40f42, #cc0e3b);
+  background-image: -moz-linear-gradient(top, #e40f42, #cc0e3b);
+  background-image: -o-linear-gradient(top, #e40f42, #cc0e3b);
+  background-image: linear-gradient(to bottom, #e40f42, #cc0e3b);
+}
+.button:active,
+.button:visited:active {
+  background-color: #f01d4f;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e40f42), to(#f01d4f));
+  background-image: -webkit-linear-gradient(top, #e40f42, #f01d4f);
+  background-image: -moz-linear-gradient(top, #e40f42, #f01d4f);
+  background-image: -o-linear-gradient(top, #e40f42, #f01d4f);
+  background-image: linear-gradient(to bottom, #e40f42, #f01d4f);
+}
+.blue-button,
+.blue-button:visited {
+  border-color: #1472ad;
+  text-shadow: 0 1px 1px #1472ad;
+  background-color: #1681c4;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1990db), to(#1681c4));
+  background-image: -webkit-linear-gradient(top, #1990db, #1681c4);
+  background-image: -moz-linear-gradient(top, #1990db, #1681c4);
+  background-image: -o-linear-gradient(top, #1990db, #1681c4);
+  background-image: linear-gradient(to bottom, #1990db, #1681c4);
+  -webkit-box-shadow: inset 0 0 3px #59b3ec;
+  -moz-box-shadow: inset 0 0 3px #59b3ec;
+  box-shadow: inset 0 0 3px #59b3ec;
+}
+.blue-button:hover,
+.blue-button:visited:hover,
+.blue-button:focus,
+.blue-button:visited:focus {
+  border-color: #116396;
+  background-color: #1472ad;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1784c9), to(#1472ad));
+  background-image: -webkit-linear-gradient(top, #1784c9, #1472ad);
+  background-image: -moz-linear-gradient(top, #1784c9, #1472ad);
+  background-image: -o-linear-gradient(top, #1784c9, #1472ad);
+  background-image: linear-gradient(to bottom, #1784c9, #1472ad);
+}
+.blue-button:active,
+.blue-button:visited:active {
+  background-color: #1990db;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
+  background-image: -webkit-linear-gradient(top, #1681c4, #1990db);
+  background-image: -moz-linear-gradient(top, #1681c4, #1990db);
+  background-image: -o-linear-gradient(top, #1681c4, #1990db);
+  background-image: linear-gradient(to bottom, #1681c4, #1990db);
+}
+/*
+BASE (MOBILE) SIZE 
+This is the average viewing window. So Desktops, Laptops, and 
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+body {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #454545;
+  font-weight: normal;
+  height: 100%;
+}
+body ::selection {
+  background: #ffd259;
+  /* Safari */
+}
+body ::-moz-selection {
+  background: #ffd259;
+  /* Firefox */
+}
+hr {
+  background: url(/img/diagonals.png) repeat-x;
+  height: 20px;
+  color: transparent;
+  border: 0px solid transparent;
+  clear: both;
+}
+/********************
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+#slider-code {
+  height: 240px;
+  overflow: visible;
+  margin: 0 auto 40px;
+  display: inline-block;
+}
+#slider-code .viewport {
+  float: left;
+  width: 710px;
+  height: 240px;
+  overflow: hidden;
+  position: relative;
+}
+#slider-code .buttons {
+  display: block;
+  margin: 107px 0 0 -25px;
+  float: left;
+}
+#slider-code .next {
+  margin: 107px -25px 0 0;
+}
+#slider-code .disable {
+  visibility: hidden;
+}
+#slider-code .overview {
+  list-style: none;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  left: 0;
+  top: 0;
+}
+#slider-code .overview li {
+  float: left;
+  margin: 0;
+  text-align: center;
+  padding: 0;
+  height: 240px;
+  width: 265px;
+  vertical-align: middle;
+}
+#slider-code .overview li:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+#slider-code .overview li img {
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* for sites that are read right to left (i.e. hebrew) */
+/* FUTUREM */
+#header_futurem {
+  background: url(/img/futurem_header.png) no-repeat center center;
+  position: relative;
+  margin-top: 55px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 130px;
+}
+#futurem_logo {
+  display: none;
+}
+/* END FUTUREM */
+.home #futurem {
+  display: none;
+}
+.home #forceHeight {
+  width: 1px;
+  position: absolute;
+}
+.home #loadcover {
+  background: #333;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+}
+.home #loadcover .bg {
+  background: #fff;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+.home #loading img {
+  display: block;
+  margin: 10px auto;
+}
+.home #loading {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  width: 260px;
+  margin-left: -130px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+}
+.home .onecol,
+.home .twocol,
+.home .threecol,
+.home .fourcol,
+.home .fivecol,
+.home .sixcol,
+.home .sevencol,
+.home .eightcol,
+.home .ninecol,
+.home .tencol,
+.home .elevencol,
+.home .twelvecol {
+  position: relative;
+  float: left;
+}
+.home h1,
+.home h2,
+.home h3,
+.home h4,
+.home p {
+  text-align: center;
+}
+.home #wrap {
+  position: relative;
+  height: 100%;
+  z-index: 1;
+}
+.home #main {
+  height: 100%;
+}
+.home #banner {
+  background: none;
+  height: 55px;
+  z-index: 10;
+}
+.home .wp1 {
+  top: 200px;
+  position: absolute;
+}
+.home #stuff hr {
+  margin: 0;
+}
+.home #stuff ul {
+  width: 100%;
+  margin: 1em 0;
+}
+.home #home {
+  height: auto;
+  min-height: 100%;
+  background: #fff;
+}
+.home #blimp {
+  background: url(/img/blimp.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-size: cover !important;
+  height: 120% !important;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.home #plunge {
+  background: url(/img/plunge.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 120% !important;
+  overflow: hidden;
+}
+.home #plunge #logo {
+  width: 260px;
+  margin-top: -120px;
+  margin-left: -130px;
+  top: 43%;
+  left: 50%;
+  position: absolute;
+}
+.home #plunge a {
+  position: absolute;
+  bottom: 20%;
+  left: 49%;
+  color: #222;
+  font-size: 1.75em;
+}
+.home #plunge a:hover {
+  text-decoration: none;
+}
+.home #plunge .blimptext {
+  top: 140%;
+}
+.home #plunge .blimptext:after {
+  content: none;
+}
+.home #client-wrap .fourcol {
+  width: 100%;
+}
+.home #work {
+  background: #fff;
+  padding-top: 55px;
+}
+.home #home p {
+  margin-bottom: 0;
+}
+.home #home .work-button {
+  margin: 60px 0;
+}
+.home #home #blimp-photo {
+  width: 100%;
+  height: 100%;
+}
+.home #home h1 {
+  width: 90%;
+  margin: 0 auto;
+  font-size: 3em;
+  text-transform: uppercase;
+  line-height: 1em;
+  text-align: left;
+  color: #454545;
+}
+.home #home .intro-text {
+  font-size: 20px;
+  max-width: 80%;
+  margin: 1.4em auto 0;
+  font-size: 1.4em;
+}
+.home #home #tagline {
+  background: #fff;
+  padding: 0;
+  margin-top: 100px;
+}
+.home #whoweare h2 {
+  padding: 1.5em 0 1em;
+  text-transform: uppercase;
+  font-size: 4.5em;
+}
+.home #whoweare h3 {
+  padding-top: 1em 0;
+  text-transform: uppercase;
+  font-size: 1.6em;
+  font-weight: bold;
+}
+.home #whoweare ul li {
+  text-align: center;
+}
+.home #whoweare #who-wrapper .sixcol {
+  padding: 0 12px 2em;
+}
+.home #whoweare #who-wrapper .firstword {
+  font-size: 8em;
+  float: left;
+  padding: 0 10px 5px;
+  text-transform: uppercase;
+  font-family: 'TradeGothicLTCom-BdCn20';
+  line-height: .9em;
+}
+.home #whoweare #who-wrapper p {
+  text-align: left;
+  font-size: 16px;
+}
+.home #whoweare #staff-wrapper {
+  width: 99%;
+  max-width: 790px;
+  text-align: center;
+  clear: both;
+}
+.home #whoweare #staff-wrapper .fourcol {
+  float: left;
+  width: 48%;
+  margin: .5em 1%;
+}
+.home #whoweare #staff-wrapper .fourcol img {
+  margin-bottom: 1em;
+  max-width: 152px;
+}
+.home #whoweare #skills-wrapper {
+  padding-top: 2em;
+  clear: both;
+  width: 99.9999%;
+  padding-bottom: 4em;
+}
+.home #whoweare #skills-wrapper .container {
+  max-width: 470px;
+}
+.home #space {
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/img/space.jpg");
+}
+.home #copyright .left {
+  float: left;
+}
+.home #copyright p {
+  text-align: left;
+}
+.home #logos {
+  background: #efefef;
+  padding-bottom: 5em;
+  text-align: center;
+}
+.home #logos h2 {
+  margin-top: 80px;
+}
+.home #logos #client-list {
+  text-align: center;
+}
+.home #logos #client-list .fourcol .heading {
+  margin-top: 44px;
+}
+.home #logos #client-list b {
+  font-family: 'TradeGothicLTCom-BdCn20';
+  font-weight: normal;
+}
+.home #portfolio {
+  background: #efefef;
+}
+.home #portfolio .grid-item {
+  float: left;
+  width: 50%;
+  -webkit-transition: background-image 0.6s ease-in-out;
+  -moz-transition: background-image 0.6s ease-in-out;
+  -ms-transition: background-image 0.6s ease-in-out;
+  -o-transition: background-image 0.6s ease-in-out;
+  transition: background-image 0.6s ease-in-out;
+}
+.home #portfolio .grid-item img {
+  width: 100%;
+  outline: 0;
+}
+.home #portfolio #brew {
+  background-image: url(/img/grid/brew-yellow.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #brew:hover,
+.home #portfolio #brew:active {
+  background-image: url(/img/grid/brew-white.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #beathotel {
+  background-image: url(/img/grid/Beehive-yellow.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #beathotel:hover,
+.home #portfolio #beathotel:active {
+  background-image: url(/img/grid/Beehive-color.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #beehive {
+  background-image: url(/img/grid/Beehive-yellow.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #beehive:hover,
+.home #portfolio #beehive:active {
+  background-image: url(/img/grid/Beehive-color.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #kika {
+  background-image: url(/img/grid/Kika-gray.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #kika:hover,
+.home #portfolio #kika:active {
+  background-image: url(/img/grid/Kika-color.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #eloqua {
+  background-image: url(/img/grid/Eloqua-black.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #eloqua:hover,
+.home #portfolio #eloqua:active {
+  background-image: url(/img/grid/Eloqua-color.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #burro {
+  background-image: url(/img/grid/TPB-black.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #burro:hover,
+.home #portfolio #burro:active {
+  background-image: url(/img/grid/TPB-color.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #kika-cards {
+  background-image: url(/img/grid/Kika-black2.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #kika-cards:hover,
+.home #portfolio #kika-cards:active {
+  background-image: url(/img/grid/Kika-color2.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #cobbhill {
+  background-image: url(/img/grid/CobbHill-yellow.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #cobbhill:hover,
+.home #portfolio #cobbhill:active {
+  background-image: url(/img/grid/CobbHill-color.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #hungrymother {
+  background-image: url(/img/grid/HungryMother-black.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #hungrymother:hover,
+.home #portfolio #hungrymother:active {
+  background-image: url(/img/grid/HungryMother-white.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #beathotel {
+  background-image: url(/img/grid/beathotel-black.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #beathotel:hover,
+.home #portfolio #beathotel:active {
+  background-image: url(/img/grid/beathotel-color.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #dhi {
+  background-image: url(/img/grid/DHI-white.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #dhi:hover,
+.home #portfolio #dhi:active {
+  background-image: url(/img/grid/DHI-color.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #teid {
+  background-image: url(/img/grid/teid-white.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #teid:hover,
+.home #portfolio #teid:active {
+  background-image: url(/img/grid/teid-color.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #mammamaria {
+  background-image: url(/img/grid/MammaMaria-yellow.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #mammamaria:hover,
+.home #portfolio #mammamaria:active {
+  background-image: url(/img/grid/MammaMaria-white.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #fmk {
+  background-image: url(/img/grid/fmk-website-white.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #fmk:hover,
+.home #portfolio #fmk:active {
+  background-image: url(/img/grid/fmk-website-color.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #podziba {
+  background-image: url(/img/grid/Podziba-white.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #podziba:hover,
+.home #portfolio #podziba:active {
+  background-image: url(/img/grid/Podziba-color.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #rnr {
+  background-image: url(/img/grid/RNRsign-white.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #rnr:hover,
+.home #portfolio #rnr:active {
+  background-image: url(/img/grid/RNRsign_color.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #bostonshaker {
+  background-image: url(/img/grid/TBS-black3.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #bostonshaker:hover,
+.home #portfolio #bostonshaker:active {
+  background-image: url(/img/grid/TBS-color3.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #bcc {
+  background-image: url(/img/grid/bcc-white.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #bcc:hover,
+.home #portfolio #bcc:active {
+  background-image: url(/img/grid/bcc-color.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #dunham {
+  background-image: url(/img/grid/dunham-yellow.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #dunham:hover,
+.home #portfolio #dunham:active {
+  background-image: url(/img/grid/dunham-color.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #bac {
+  background-image: url(/img/grid/BAC-yellow.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #bac:hover,
+.home #portfolio #bac:active {
+  background-image: url(/img/grid/BAC-color.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #gather {
+  background-image: url(/img/grid/gather-yellow.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #gather:hover,
+.home #portfolio #gather:active {
+  background-image: url(/img/grid/gather-color.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #statepark {
+  background-image: url(/img/grid/StatePark-darkgray.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #portfolio #statepark:hover,
+.home #portfolio #statepark:active {
+  background-image: url(/img/grid/StatePark-color.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.home #clients h2 {
+  margin-top: 1em;
+}
+.home #process {
+  background: white;
+  padding-bottom: 10px;
+}
+.home #process h2 {
+  padding: 1em 0;
+  text-transform: uppercase;
+  font-size: 4.5em;
+  margin-top: 0;
+}
+.home #process .center {
+  width: 320px;
+}
+.home #process .center p {
+  margin-top: 2em;
+}
+.home #process .center .bigcircle {
+  font-family: 'MCMHellenicWide', Georgia;
+  color: #222;
+  text-transform: uppercase;
+  width: 123px;
+  height: 123px;
+  border-radius: 65px;
+  margin-left: -25px;
+  line-height: 130px;
+  font-size: 12px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.home #process .center .bigcircle.first {
+  margin-left: 0;
+}
+.home #process .center .fourcol {
+  padding: 0 12px;
+}
+.home #about #grayboxes {
+  height: auto;
+  background: #757575;
+}
+.home #about #grayboxes .sixcol {
+  width: 100%;
+}
+.home #about #grayboxes #talk {
+  color: #fff;
+  text-align: left;
+}
+.home #about #grayboxes #talk h3,
+.home #about #grayboxes #talk p {
+  text-align: left;
+  margin: 0;
+}
+.home #about #grayboxes #talk h2,
+.home #about #grayboxes #talk h3 a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 4em;
+  line-height: 1em;
+  font-family: 'TradeGothicLT-Bold';
+  text-align: left;
+  padding-right: 10px;
+}
+.home #about #grayboxes #talk h2 {
+  padding-left: 20px;
+  font-family: 'TradeGothicLTCom-BdCn20';
+}
+.home #about #grayboxes #talk h3 a {
+  font-size: 1.4em;
+}
+.home #about #grayboxes #talk #blog-items {
+  padding-bottom: 4em;
+}
+.home #about #grayboxes #talk #blog-items .permalink {
+  text-transform: uppercase;
+  font-family: 'TradeGothicLT-Bold';
+  font-size: 1.3em;
+}
+.home #about #grayboxes #talk #blog-items time {
+  font-family: TradeGothicLT-CondEighteen '; //Trade Gothic W01 Cn 18', 'Arial Black', Tahoma;
+  float: left;
+  height: 60px;
+  padding-left: 20px;
+  min-width: 90px;
+}
+.home #about #grayboxes #talk #blog-items time span {
+  font-family: 'TradeGothicLTCom-BdCn20';
+}
+.home #about #grayboxes #talk #blog-items .post-item {
+  padding-left: 120px;
+  margin-bottom: 2em;
+  position: relative;
+}
+.home #about #grayboxes #talk #blog-items .post-item p {
+  width: 90%;
+  padding-right: 10%;
+}
+.home #about #grayboxes #talk #blog-items .yellow-button {
+  margin: 1em 0 0 120px;
+}
+.home #about #grayboxes #talk #blog-items #twitter_update_list {
+  width: 90%;
+  padding-right: 10%;
+}
+.home #about #grayboxes #talk .posttime {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0;
+  width: 94px;
+  text-align: center;
+  font-family: 'TradeGothicLTCom-BdCn20';
+  font-size: 1.4em;
+  font-weight: normal;
+}
+.home #about #grayboxes #talk .posttime span {
+  font-size: 65px;
+  line-height: 65px;
+}
+.home #about #grayboxes #talk #last-tweet {
+  margin-top: 55px;
+}
+.home #about #grayboxes #talk #last-tweet img {
+  padding: 20px 40px;
+  position: absolute;
+  left: 0;
+  top: -12px;
+}
+.home #about #grayboxes #talk #last-tweet h3 a {
+  text-transform: none;
+}
+.home #about #grayboxes #philosophy {
+  text-align: center;
+  padding-top: 1em;
+}
+.home #about #grayboxes #philosophy img {
+  width: 90%;
+  max-width: 448px;
+  padding-bottom: 2em;
+  position: relative;
+  left: 20px;
+}
+.home #about #grayboxes #philosophy h3 {
+  color: #fff;
+  font-family: TradeGothicLT-CondEighteen '; //Trade Gothic W01 Cn 18', 'Arial Black', Tahoma;
+  font-size: 1.6em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 1em;
+}
+.home #about #grayboxes #philosophy #circle-wrap {
+  position: relative;
+  width: 288px;
+  height: 240px;
+  margin: 0 auto;
+}
+.home #about #grayboxes #philosophy .bigcircle {
+  position: absolute;
+  height: 160px;
+  width: 160px;
+  line-height: 160px;
+  font-size: 12px;
+  font-family: 'MCMHellenicWide', Georgia;
+  text-transform: uppercase;
+}
+.home #about #grayboxes #philosophy #circle1 {
+  left: 105px;
+}
+.home #about #grayboxes #philosophy #circle2,
+.home #about #grayboxes #philosophy #circle3 {
+  top: 80px;
+}
+.home #about #grayboxes #philosophy #circle2 {
+  left: 60px;
+}
+.home #about #grayboxes #philosophy #circle3 {
+  left: 165px;
+}
+.home #about #grayboxes #philosophy #pointer-text {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  color: #fff;
+  font-family: 'TradeGothicLTCom-BdCn20';
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.home #footer {
+  top: auto;
+  left: auto;
+  width: 100%;
+}
+.home .blimptext {
+  -webkit-transform: rotateX(-15deg) skewY(-15deg);
+  -moz-transform: rotateX(-15deg) skewY(-15deg);
+  -ms-transform: rotateX(-15deg) skewY(-15deg);
+  -o-transform: rotateX(-15deg) skewY(-15deg);
+  transform: rotateX(-15deg) skewY(-15deg);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(M11=1, M12=0, M21=-0.26794919243112214, M22=1, SizingMethod= auto expand ')"';
+  filter: progid:DXImageTransform.Microsoft.Matrix(M11=1,M12=0,M21=-0.26794919243112214,M22=1,SizingMethod='auto expand');
+  position: absolute;
+  width: 300px;
+  margin-left: -150px;
+  left: 50%;
+  top: 30%;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-family: 'ThirstyScriptRegular', Georgia;
+  line-height: 38px;
+}
+.home .blimptext .altfont {
+  font-family: 'TradeGothicLTCom-BdCn20';
+}
+.home .blimptext:after {
+  content: url('/img/smallBolt.png');
+  position: absolute;
+  bottom: -75px;
+  right: 126px;
+}
+.home #bigblimptext .blimptext {
+  display: none;
+}
+.home #bigblimptext .blimptext:first-child {
+  display: block;
+}
+.home .blimptext .medium {
+  font-size: 48px;
+}
+.home .blimptext .seventy {
+  font-size: 70px;
+}
+.home .blimptext .large {
+  line-height: 1em;
+  font-size: 120px;
+}
+.home .blimptext .altfont {
+  text-transform: uppercase;
+}
+.home .blimptext em {
+  font-style: normal;
+  font-size: 48px;
+}
+/* home page */
+/* blog template page */
+/* archive page */
+/* date archive page */
+/* replace the number to the corresponding page number */
+/* search page */
+/* search result page */
+/* no results search page */
+/* individual paged search (i.e. body.search-paged-3) */
+.error404 #content {
+  padding-top: 100px;
+  background: url(/img/space.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  padding-bottom: 150px;
+}
+.error404 #main {
+  width: 90%;
+  margin: 0 5%;
+  text-align: center;
+}
+.error404 h1,
+.error404 h2,
+.error404 p {
+  color: #ffc426;
+  margin: .3em 0;
+}
+.error404 h1 {
+  font-size: 5em;
+}
+.error404 h2 {
+  text-transform: uppercase;
+}
+/* 404 page */
+/* single post page */
+/* individual post page by id (i.e. body.postid-73) */
+/* individual paged single (i.e. body.single-paged-3) */
+/* attatchment page */
+/* individual attatchment page (i.e. body.attachmentid-763) */
+/* style mime type pages */
+/* author page */
+/* user nicename (i.e. body.author-samueladams) */
+/* paged author archives (i.e. body.author-paged-4) for page 4 */
+/* category page */
+/* individual category page (i.e. body.category-6) */
+/* replace the number to the corresponding page number */
+/* tag page */
+/* individual tag page (i.e. body.tag-news) */
+/* replace the number to the corresponding page number */
+/* custom page template page */
+/* individual page template (i.e. body.page-template-contact-php */
+/* replace the number to the corresponding page number */
+/* parent page template */
+/* child page template */
+/* replace the number to the corresponding page number */
+/* if user is logged in */
+/* paged items like search results or archives */
+/* individual paged (i.e. body.paged-3) */
+.type-post ul {
+  list-style-type: disc;
+}
+.page-template-page-landing-php #main.container {
+  width: 90%;
+  margin: 0 0 0 10%;
+}
+.page-template-page-landing-php #mc_embed_signup .mc-field-group label {
+  font-family: 'TradeGothicLTCom-BdCn20';
+  color: #454545;
+  text-transform: uppercase;
+}
+.page-template-page-landing-php #mc_embed_signup input {
+  border: 1px solid #ffc426;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+.page-template-page-landing-php #mc_embed_signup #mc-embedded-subscribe,
+.page-template-page-landing-php .button {
+  background: #ffc426;
+  color: #454545;
+  font-family: TradeGothicLT-CondEighteen '; //Trade Gothic W01 Cn 18', 'Arial Black', Tahoma;
+  text-transform: uppercase;
+  padding: 6px 22px;
+  height: auto;
+}
+.page-template-page-landing-php .button {
+  border: 1px solid #666;
+  background: #454545;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  color: #fff;
+  font-size: 20px;
+}
+.page-template-page-landing-php #mc_embed_signup h2 {
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+.page-template-page-landing-php #mc_embed_signup .mc-field-group .asterisk {
+  top: 29px;
+}
+.page-template-page-landing-php #main h2 {
+  text-transform: uppercase;
+  font-size: 40px;
+  line-height: 40px;
+}
+.page-template-page-landing-php #main h3 {
+  font-family: "Georgia", Cambria, Times New Roman, Times, serif;
+  font-style: italic;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.page-template-page-landing-php #main p {
+  font-size: 18px;
+}
+.page-template-page-landing-php #main h2,
+.page-template-page-landing-php #main h3,
+.page-template-page-landing-php #main p {
+  max-width: 444px;
+}
+.page-template-page-landing-php #main .center_box {
+  margin: 0;
+  width: 75%;
+  padding: 0 20px;
+  border: 1px solid #666;
+}
+.page-template-page-landing-php #main .center_box h2 {
+  font-size: 30px;
+  line-height: 34px;
+}
+.page-template-page-landing-php #main .center_box p {
+  font-family: TradeGothicLT-CondEighteen '; //Trade Gothic W01 Cn 18', 'Arial Black', Tahoma;
+}
+.page-template-page-landing-php #blog-items {
+  color: #fff;
+  text-align: left;
+  position: relative;
+  padding: 0 0 4em 0;
+}
+.page-template-page-landing-php #blog-items h3,
+.page-template-page-landing-php #blog-items p {
+  text-align: left;
+  margin: 0;
+}
+.page-template-page-landing-php #blog-items h2,
+.page-template-page-landing-php #blog-items h3 a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 4em;
+  line-height: 1em;
+  font-family: 'TradeGothicLT-Bold';
+  text-align: left;
+  padding-right: 10px;
+}
+.page-template-page-landing-php #blog-items h2 {
+  padding-left: 20px;
+  font-family: 'TradeGothicLTCom-BdCn20';
+}
+.page-template-page-landing-php #blog-items h3 a {
+  font-size: 1.4em;
+}
+.page-template-page-landing-php #blog-items .permalink {
+  text-transform: uppercase;
+  font-family: 'TradeGothicLT-Bold';
+  font-size: 1.3em;
+}
+.page-template-page-landing-php #blog-items time {
+  font-family: TradeGothicLT-CondEighteen '; //Trade Gothic W01 Cn 18', 'Arial Black', Tahoma;
+  float: left;
+  height: 60px;
+  padding-left: 20px;
+}
+.page-template-page-landing-php #blog-items time span {
+  font-family: 'TradeGothicLTCom-BdCn20';
+}
+.page-template-page-landing-php #blog-items .post-item {
+  padding-left: 120px;
+  margin-bottom: 2em;
+  position: relative;
+}
+.page-template-page-landing-php #blog-items .post-item p {
+  width: 90%;
+  padding-right: 10%;
+}
+.page-template-page-landing-php #blog-items .yellow-button {
+  margin: 1em 0 0 120px;
+}
+.page-template-page-landing-php #blog-items #twitter_update_list {
+  width: 90%;
+  padding-right: 10%;
+}
+.page-template-page-landing-php .posttime {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0;
+  width: 94px;
+  text-align: center;
+  font-family: 'TradeGothicLTCom-BdCn20';
+  font-size: 1.4em;
+  font-weight: normal;
+}
+.page-template-page-landing-php .posttime span {
+  font-size: 65px;
+  line-height: 65px;
+}
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+.wrap {
+  width: 90%;
+  margin: 0 auto;
+}
+.twelvecol {
+  width: 99.9999993%;
+  clear: both;
+}
+/*********************
+LINK STYLES
+*********************/
+a,
+a:visited {
+  color: #ffc426;
+  outline: none;
+  /* on hover */
+  /* on click */
+  /* mobile tap color */
+}
+a:hover,
+a:visited:hover,
+a:focus,
+a:visited:focus {
+  color: #ffd054;
+}
+a:active,
+a:visited:active {
+  outline: none;
+}
+a:link,
+a:visited:link {
+  /*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5 {
+  font-family: 'TradeGothicLTCom-BdCn20';
+  text-rendering: optimizelegibility;
+  font-weight: 500;
+  /*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+  /* removing text decoration from all headline links */
+}
+h1 a,
+.h1 a,
+h2 a,
+.h2 a,
+h3 a,
+.h3 a,
+h4 a,
+.h4 a,
+h5 a,
+.h5 a {
+  text-decoration: none;
+}
+h1,
+.h1 {
+  font-size: 2.5em;
+  line-height: 1.333em;
+}
+h2,
+.h2 {
+  font-size: 33px;
+  line-height: 33px;
+  margin-bottom: 0.375em;
+}
+h3,
+.h3 {
+  font-size: 1.125em;
+}
+h4,
+.h4 {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+h5,
+.h5 {
+  font-size: 0.846em;
+  line-height: 2.09em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+/*********************
+HEADER SYTLES
+*********************/
+.navbar .nav {
+  margin: 0;
+}
+.navbar .nav > li > a {
+  padding: 16px 10px 18px;
+  outline: none;
+}
+.navbar .nav > li > a:hover,
+.navbar .nav .active > a:hover {
+  color: #ffc426;
+  background-color: transparent;
+  outline: none;
+}
+.navbar .nav .active > a {
+  background: transparent;
+  outline: none;
+}
+header .navbar-inner {
+  background: rgba(255, 255, 255, 0.95);
+}
+header .navbar-inner .container {
+  width: 98%;
+}
+header .navbar-inner .brand {
+  padding: 8px 10px 12px 0;
+}
+#navbar-social {
+  display: none;
+}
+/*********************
+NAVIGATION STYLES
+*********************/
+/*
+all navs have a .nav class applied via
+the wp_menu function, this is so we can
+easily just write on group of styles for
+the navs on the site and our css is cleaner
+and moe scalable.
+*/
+.nav {
+  border-bottom: 0;
+  float: left;
+  /* end .menu li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+.nav li {
+  /*
+		so you really have to rethink your dropdowns for mobile.
+		you don't want to have it expand too much because the
+		screen is so small. How you manage your menu should
+		depend on the project. Here's some great info on it:
+		http://www.alistapart.com/articles/organizing-mobile/
+		*/
+}
+.nav li a {
+  font-family: 'TradeGothicLT-Bold';
+  text-transform: uppercase;
+  display: block;
+  text-decoration: none;
+  padding: 10px 10px;
+  color: #444;
+  /*
+			remember this is for mobile ONLY, so there's no need
+			to even declare hover styles here, you can do it in
+			the style.less file where it's relevant. We want to
+			keep this file as small as possible!
+			*/
+}
+.nav li a:hover,
+.nav li a:focus {
+  color: #ffc426;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 30px;
+}
+/* end .nav */
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+article header {
+  background: transparent;
+}
+article header a,
+article header h2,
+article header h3 {
+  text-transform: uppercase;
+}
+article header h2,
+article header h3 {
+  margin: 0;
+  padding-left: 10px;
+  border-left: 2px solid #222;
+  line-height: 1em;
+  font-size: 1.6em;
+  font-family: 'TradeGothicLTCom-BdCn20';
+}
+article header h2.noborder,
+article header h3.noborder {
+  border-left: 0px solid transparent;
+  margin-bottom: .2em;
+}
+article header h2:hover {
+  color: #ffc426;
+}
+article header h3 {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  padding-top: 1em;
+  margin-bottom: 1.4em;
+}
+article header h4,
+article header ul {
+  padding-left: 12px;
+}
+article header p {
+  padding-left: 12px;
+}
+article header p.lessmargin {
+  margin: .2em 0;
+}
+article header a {
+  font-family: 'TradeGothicLTCom-BdCn20';
+  font-size: 1em;
+  text-decoration: underline;
+}
+article header a.back {
+  color: #000;
+  text-decoration: none;
+  float: left;
+  clear: both;
+  margin-left: -54px;
+}
+article header a.back:after {
+  content: url(/img/grid-icon.png);
+  clear: both;
+  float: left;
+  margin-top: 2em;
+  position: relative;
+  left: 54px;
+}
+.page-header {
+  border-bottom: 0px solid transparent;
+}
+.blog h1,
+.archive h1 {
+  font-size: 6em;
+}
+.blog #posttime,
+.archive #posttime {
+  top: 4px;
+}
+.page-template-default #content {
+  padding-top: 70px;
+}
+.page-template-work-php #content {
+  padding: 0 5%;
+  width: 90%;
+  margin-top: 70px;
+}
+.blog .pager a,
+.single .pager a,
+.category .pager a,
+.author .pager a,
+.archive .pager a {
+  border: 0px solid transparent;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  margin-left: 12px;
+}
+.blog .pager .previous a,
+.single .pager .previous a,
+.category .pager .previous a,
+.author .pager .previous a,
+.archive .pager .previous a,
+.blog .pager .next a,
+.single .pager .next a,
+.category .pager .next a,
+.author .pager .next a,
+.archive .pager .next a {
+  float: none;
+}
+.blog .pager .next a,
+.single .pager .next a,
+.category .pager .next a,
+.author .pager .next a,
+.archive .pager .next a {
+  margin-top: .5em;
+}
+.blog .more-link,
+.single .more-link,
+.category .more-link,
+.author .more-link,
+.archive .more-link {
+  font-family: 'TradeGothicLT-Bold';
+  font-size: 1.3em;
+  text-transform: uppercase;
+}
+.blog article header,
+.single article header,
+.category article header,
+.author article header,
+.archive article header {
+  position: relative;
+  padding-right: 100px;
+}
+.blog article header h2,
+.single article header h2,
+.category article header h2,
+.author article header h2,
+.archive article header h2 {
+  border-left: 0;
+  padding-left: 0;
+}
+.blog article header h2 a,
+.single article header h2 a,
+.category article header h2 a,
+.author article header h2 a,
+.archive article header h2 a {
+  text-decoration: none;
+  color: #454545;
+  font-family: 'TradeGothicLT-Bold';
+}
+.blog article header p,
+.single article header p,
+.category article header p,
+.author article header p,
+.archive article header p {
+  padding-left: 0;
+  font-family: TradeGothicLT-CondEighteen '; //Trade Gothic W01 Cn 18', 'Arial Black', Tahoma;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #ffc426;
+  margin: .1em 0;
+}
+.blog article header p a,
+.single article header p a,
+.category article header p a,
+.author article header p a,
+.archive article header p a {
+  font-family: TradeGothicLT-CondEighteen '; //Trade Gothic W01 Cn 18', 'Arial Black', Tahoma;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #ffc426;
+  text-decoration: none;
+}
+.blog article footer,
+.single article footer,
+.category article footer,
+.author article footer,
+.archive article footer {
+  background: transparent;
+}
+.blog #posttime,
+.single #posttime,
+.category #posttime,
+.author #posttime,
+.archive #posttime {
+  position: absolute;
+  right: 0;
+  top: -2px;
+  color: #fff;
+  background: #ffc426;
+  text-transform: uppercase;
+  padding: 4px 0;
+  width: 74px;
+  text-align: center;
+  font-family: TradeGothicLT-CondEighteen '; //Trade Gothic W01 Cn 18', 'Arial Black', Tahoma;
+}
+.blog #posttime span,
+.single #posttime span,
+.category #posttime span,
+.author #posttime span,
+.archive #posttime span {
+  font-size: 35px;
+  line-height: 35px;
+  font-family: 'TradeGothicLTCom-BdCn20';
+}
+.blog h1,
+.single h1,
+.category h1,
+.author h1,
+.archive h1 {
+  color: #454545;
+  text-transform: uppercase;
+  margin: 0;
+}
+.blog #content,
+.single #content,
+.category #content,
+.author #content,
+.archive #content {
+  padding: 0 5%;
+  width: 90%;
+  margin-top: 70px;
+}
+.blog .page-header,
+.single .page-header,
+.category .page-header,
+.author .page-header,
+.archive .page-header {
+  margin: 0 0 50px 0;
+  padding-bottom: 0;
+}
+.blog .widget-first,
+.single .widget-first,
+.category .widget-first,
+.author .widget-first,
+.archive .widget-first {
+  margin: 0;
+}
+.blog .widget-first h3,
+.single .widget-first h3,
+.category .widget-first h3,
+.author .widget-first h3,
+.archive .widget-first h3 {
+  margin-top: 0;
+}
+.blog #categories-2,
+.single #categories-2,
+.category #categories-2,
+.author #categories-2,
+.archive #categories-2 {
+  border-top: 1px solid #757575;
+  border-bottom: 1px solid #757575;
+  padding-bottom: 1em;
+}
+.blog #categories-2 h3,
+.single #categories-2 h3,
+.category #categories-2 h3,
+.author #categories-2 h3,
+.archive #categories-2 h3 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin: .6em 0 ;
+}
+.blog #categories-2 a,
+.single #categories-2 a,
+.category #categories-2 a,
+.author #categories-2 a,
+.archive #categories-2 a {
+  color: #454545;
+  text-transform: uppercase;
+  font-family: 'TradeGothicLTCom-BdCn20';
+  font-size: 1.3em;
+}
+.blog #recent-posts-2 h3,
+.single #recent-posts-2 h3,
+.category #recent-posts-2 h3,
+.author #recent-posts-2 h3,
+.archive #recent-posts-2 h3 {
+  color: #fff;
+  background: #ffc426;
+  padding: .2em .4em;
+  text-transform: uppercase;
+  max-width: 86px;
+}
+.blog #recent-posts-2 a,
+.single #recent-posts-2 a,
+.category #recent-posts-2 a,
+.author #recent-posts-2 a,
+.archive #recent-posts-2 a {
+  color: #454545;
+}
+.blog #recent-posts-2 a:hover,
+.single #recent-posts-2 a:hover,
+.category #recent-posts-2 a:hover,
+.author #recent-posts-2 a:hover,
+.archive #recent-posts-2 a:hover {
+  color: #ffc426;
+}
+.blog #respond h3,
+.single #respond h3,
+.category #respond h3,
+.author #respond h3,
+.archive #respond h3 {
+  font-size: 48px;
+  text-transform: uppercase;
+  line-height: 1em;
+  margin: 0;
+}
+.blog #respond button,
+.single #respond button,
+.category #respond button,
+.author #respond button,
+.archive #respond button,
+.blog #respond html input[type="button"],
+.single #respond html input[type="button"],
+.category #respond html input[type="button"],
+.author #respond html input[type="button"],
+.archive #respond html input[type="button"],
+.blog #respond input[type="reset"],
+.single #respond input[type="reset"],
+.category #respond input[type="reset"],
+.author #respond input[type="reset"],
+.archive #respond input[type="reset"],
+.blog #respond input[type="submit"],
+.single #respond input[type="submit"],
+.category #respond input[type="submit"],
+.author #respond input[type="submit"],
+.archive #respond input[type="submit"] {
+  -webkit-appearance: none;
+  border: 0px solid transparent;
+}
+.page-template-work-php #wrap {
+  width: 80%;
+  padding: 40px 10% 0;
+}
+.page-template-work-php .navbar-inner {
+  margin: 0 auto;
+}
+.page-template-work-php .size-full {
+  padding-bottom: 40px;
+}
+.page-template-work-php article .alignnone {
+  width: 100%;
+}
+/* end .hentry */
+/* want to style individual post classes? Booya! */
+/* post by id (i.e. post-3) */
+/* general post style */
+/* general article on a page style */
+/* general style on an attatchment */
+/* sticky post style */
+/* hentry class */
+/* style by category (i.e. category-videos) */
+/* style by tag (i.e. tag-news) */
+/* post meta */
+.meta {
+  color: #999;
+}
+/* post content */
+.post-content {
+  /*
+			image alignment on a screen this size may be
+			a bit difficult. It's set to start aligning
+			and floating images at the next breakpoint,
+			but it's up to you. Feel free to change it up.
+			*/
+}
+.post-content dd {
+  margin-left: 0;
+  font-size: 0.9em;
+  color: #787878;
+  margin-bottom: 1.5em;
+}
+.post-content img {
+  margin: 0 0 1.5em 0;
+  max-width: 100%;
+  height: auto;
+}
+.post-content video,
+.post-content object {
+  max-width: 100%;
+  height: auto;
+}
+.post-content pre,
+.post-content code {
+  background: #eee;
+  border: 1px solid #cecece;
+  padding: 10px;
+}
+/* end .post-content */
+.wp-caption {
+  background: #eee;
+  padding: 5px;
+  /* images inside wp-caption */
+}
+.wp-caption img {
+  margin-bottom: 0;
+  width: 100%;
+}
+.wp-caption p.wp-caption-text {
+  font-size: 0.85em;
+  margin: 4px 0 7px;
+  text-align: center;
+}
+/* end .wp-caption */
+/* image gallery styles */
+/* end .gallery */
+/* gallery caption styles */
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+.page-navigation,
+.wp-prev-next {
+  margin: 1.1em 0 2.2em;
+}
+.bones_page_navi {
+  /* current page link */
+  /* end .bones_page_navi .bpn-current */
+  /* common styles for page-navi links */
+  /* remove the bg on end links */
+  /* previous link */
+  /* next page link */
+  /* first page link */
+  /* last page link */
+}
+.bones_page_navi li {
+  float: left;
+  margin-left: 10px;
+}
+.bones_page_navi li a {
+  padding: 3px 6px;
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+.bones_page_navi li a:hover,
+.bones_page_navi li a:focus {
+  color: #f01d4f;
+  text-decoration: underline;
+}
+.bones_page_navi li.bpn-current {
+  padding: 3px 6px;
+  border-bottom: 2px solid #f01d4f;
+  position: relative;
+}
+.bones_page_navi li.bpn-current a {
+  /* hovering on current page link */
+}
+.bones_page_navi li.bpn-prev-link,
+.bones_page_navi li.bpn-next-link {
+  font-weight: 700;
+}
+.bones_page_navi li.bpn-prev-link a,
+.bones_page_navi li.bpn-next-link a {
+  padding: 0;
+}
+.bones_page_navi li.bpn-prev-link a:hover,
+.bones_page_navi li.bpn-next-link a:hover,
+.bones_page_navi li.bpn-first-page-link a:hover,
+.bones_page_navi li.bpn-last-page-link a:hover {
+  background: none;
+}
+/* end .bones_page_navi */
+/* fallback previous & next links */
+.wp-prev-next .prev-link {
+  float: left;
+}
+.wp-prev-next .next-link {
+  float: right;
+}
+/* end .wp-prev-next */
+/******************************************************************
+COMMENT STYLES
+******************************************************************/
+/* h3 comment title */
+#comments {
+  /* number of comments span */
+}
+.commentlist {
+  /* general comment classes */
+  /* vcard */
+  /* end .commentlist .vcard */
+  /* comment meta */
+  /* comment content */
+  /* end .commentlist .comment_content */
+  /* comment reply link */
+  /* end .commentlist .comment-reply-link */
+}
+.commentlist li {
+  position: relative;
+  clear: both;
+  overflow: hidden;
+  list-style-type: none;
+  margin-bottom: 1.5em;
+  padding: 0.7335em 10px;
+  /* end .commentlist li ul.children */
+}
+.commentlist li:last-child {
+  margin-bottom: 0;
+}
+.commentlist li ul.children {
+  margin: 0;
+  /* variations */
+  /* change number for different depth */
+}
+.commentlist li[class*=depth-] {
+  margin-top: 1.1em;
+}
+.commentlist li.depth-1 {
+  margin-left: 0;
+  margin-top: 0;
+}
+.commentlist li:not(.depth-1) {
+  margin-right: -10px;
+  margin-left: -10px;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+.commentlist .odd {
+  background: #eee;
+}
+.commentlist .even {
+  background: #fefefe;
+}
+.commentlist .vcard {
+  margin-left: 50px;
+}
+.commentlist .vcard cite.fn {
+  font-weight: 700;
+  font-style: normal;
+}
+.commentlist .vcard time {
+  float: right;
+}
+.commentlist .vcard time a {
+  color: #999;
+  text-decoration: none;
+}
+.commentlist .vcard time a:hover {
+  text-decoration: underline;
+}
+.commentlist .vcard img.avatar {
+  position: absolute;
+  left: 10px;
+  padding: 2px;
+  border: 1px solid #cecece;
+  background: #fff;
+}
+.commentlist .comment_content {
+  margin-left: 50px;
+}
+.commentlist .comment_content p {
+  margin: 0.7335em 0 1.5em;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.commentlist .comment-reply-link {
+  text-decoration: none;
+  float: right;
+  background: #4598bb;
+  padding: 3px 5px;
+  color: #fff;
+  opacity: 0.65;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+.commentlist .comment-reply-link:hover,
+.commentlist .comment-reply-link:focus {
+  opacity: 1;
+}
+/* end .commentlist */
+/******************************************************************
+COMMENT FORM STYLES
+******************************************************************/
+.respond-form {
+  margin: 1.5em 10px;
+  padding-bottom: 2.2em;
+}
+.respond-form form {
+  margin: 0.75em 0;
+}
+.respond-form form li {
+  list-style-type: none;
+  clear: both;
+  margin-bottom: 0.7335em;
+}
+.respond-form form li label,
+.respond-form form li small {
+  display: none;
+}
+.respond-form form input[type=text],
+.respond-form form input[type=email],
+.respond-form form input[type=url],
+.respond-form form textarea {
+  padding: 3px 6px;
+  background: #efefef;
+  border: 2px solid #cecece;
+  line-height: 1.5em;
+  /* form validation */
+}
+.respond-form form input[type=text]:focus,
+.respond-form form input[type=email]:focus,
+.respond-form form input[type=url]:focus,
+.respond-form form textarea:focus {
+  background: #fff;
+}
+.respond-form form input[type=text]:invalid,
+.respond-form form input[type=email]:invalid,
+.respond-form form input[type=url]:invalid,
+.respond-form form textarea:invalid {
+  outline: none;
+  border-color: #fbc2c4;
+  background-color: #f6e7eb;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  box-shadow: none;
+}
+.respond-form form input[type=text],
+.respond-form form input[type=email],
+.respond-form form input[type=url] {
+  max-width: 400px;
+  min-width: 250px;
+}
+.respond-form form textarea {
+  resize: none;
+  width: 97.3%;
+  height: 150px;
+}
+/* comment submit button */
+/* comment form title */
+#comment-form-title {
+  margin: 0 0 1.1em;
+}
+/* cancel comment reply link */
+/* logged in comments */
+/* allowed tags */
+#allowed_tags {
+  margin: 1.5em 10px 0.7335em 0;
+}
+/* no comments */
+.nocomments {
+  margin: 0 20px 1.1em;
+}
+/*********************
+SIDEBARS & ASIDES
+*********************/
+#sidebar hr {
+  margin: 0;
+}
+#text-4 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+#text-3 {
+  margin-top: 0;
+}
+#text-2 {
+  position: fixed;
+  top: -1000px;
+  display: none;
+  margin: 0;
+  z-index: 999999;
+  background: url(/img/diagonals-yellow.jpg);
+  width: 100%;
+  max-height: none;
+  color: #454545;
+}
+#text-2 p.twelvecol.first {
+  display: none;
+}
+#text-2 .sixcol.last {
+  display: none;
+}
+#text-2 h3 {
+  font-size: 26px;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 2em;
+  text-transform: uppercase;
+}
+#text-2 .wpcf7 {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+#text-2 .wpcf7 .sixcol {
+  float: none;
+}
+#text-2 .wpcf7 h1,
+#text-2 .wpcf7 h2,
+#text-2 .wpcf7 h3 {
+  text-align: left;
+  text-transform: uppercase;
+  margin-top: 0;
+  color: #222;
+  padding-left: 20px;
+}
+#text-2 .wpcf7 p {
+  color: #222;
+  text-align: left;
+  padding-left: 20px;
+}
+#text-2 .wpcf7 p a {
+  color: #222;
+}
+#text-2 .wpcf7 .big-white {
+  color: #fff;
+  font-size: 2em;
+  line-height: .8em;
+  display: block;
+  margin-top: 40px;
+}
+#text-2 .wpcf7 .big-white:after {
+  content: "Get in touch with us";
+  padding-top: .2em;
+  clear: both;
+  display: block;
+}
+#text-2 .wpcf7 .whitebox {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 12px;
+  margin-bottom: 1em;
+  color: #222;
+}
+#text-2 .wpcf7 .whitebox h3 {
+  color: #222;
+}
+#text-2 .wpcf7 .sixcol.last p input,
+#text-2 .wpcf7 .sixcol.last p textarea {
+  width: 90%;
+  font-size: 13px;
+}
+#text-2 .wpcf7 .fivecol.first {
+  margin-right: 20px;
+}
+#text-2 .wpcf7 #other-contacts {
+  font-family: Georgia, sans-serif;
+  width: 230px;
+}
+#text-2 .wpcf7 #other-contacts span {
+  font-weight: 300;
+  font-size: 12px;
+}
+#text-2 .wpcf7 #other-contacts a {
+  color: #454545;
+}
+#text-2 .wpcf7 #other-contacts .strong {
+  font-weight: bold;
+  font-size: 14px;
+}
+#text-2 .wpcf7 .close-contact {
+  position: absolute;
+  right: 5%;
+  top: 10px;
+  z-index: 999998;
+}
+#text-2 .clearfix {
+  width: 100%;
+  clear: both;
+}
+#text-2 textarea {
+  width: 100%;
+  max-height: 40px;
+}
+/*********************
+FOOTER STYLES
+*********************/
+#landing_footer {
+  background: #000;
+  color: #efefef;
+  font-family: 'ThirstyScriptRegular', Georgia;
+  text-align: center;
+  font-size: 30px;
+  clear: both;
+}
+#landing_footer p {
+  margin: 0;
+}
+#landing_footer #navbar-social {
+  position: static;
+  display: inline-block;
+  float: none;
+}
+#landing_footer .twelvecol {
+  clear: both;
+}
+.landing_split {
+  background: #ffc426;
+}
+.landing_split h2 {
+  padding-left: 10px;
+  text-transform: uppercase;
+  margin: 0;
+}
+#landing_blog {
+  background: #666;
+  color: #fff;
+  padding: 20px 0;
+}
+#landing_blog .threecol h2 {
+  padding-bottom: .5em;
+}
+#landing_twitter {
+  background: #ffc426;
+  color: #fff;
+  padding: 20px 0;
+}
+#landing_twitter .button {
+  border: 1px solid #454545;
+  float: right;
+  margin: 20px;
+}
+#landing_twitter .kebo-tweets {
+  padding-left: 10px;
+  margin: 0;
+  color: #333;
+}
+#landing_twitter .kebo-tweets a,
+#landing_twitter .kebo-tweets a:visited {
+  color: #333;
+  font-weight: bold;
+}
+#landing_twitter .kebo-tweets time {
+  display: none;
+}
+#landing_twitter .kmeta a,
+#landing_twitter .kmeta a:visited {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+#landing_twitter .ktext {
+  margin-top: 0;
+  min-height: 55px;
+}
+#landing_twitter .ktweet:before {
+  content: url(/img/twitterbird-blogicon.png);
+  float: left;
+  padding: 20px 20px 10px 0;
+}
+footer {
+  background: url(/img/diagonals-yellow.jpg);
+  padding-top: 2em;
+}
+footer #footer-wrap {
+  width: 80%;
+  padding: 0 10%;
+}
+footer #footer-wrap p,
+footer #footer-wrap h2,
+footer #footer-wrap h3 {
+  text-align: left;
+  color: #222;
+}
+footer h2 {
+  text-transform: uppercase;
+  margin-top: 0;
+}
+footer #get-in-touch {
+  max-width: 150px;
+  padding-bottom: 1em;
+}
+footer #get-in-touch a {
+  padding: 0px 1px;
+}
+footer #get-in-touch .open-contact a:hover {
+  color: #222;
+}
+footer #get-in-touch h2 {
+  margin-bottom: .2em;
+  text-align: left;
+  font-size: 3.3em;
+  line-height: 1em;
+}
+footer #get-in-touch h2 a {
+  color: #fff;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+footer #get-in-touch h2 a:hover {
+  text-decoration: none;
+}
+footer #contact-info a {
+  color: #222;
+  text-decoration: underline;
+}
+footer #copyright {
+  background: #333;
+  color: #fff;
+  padding: .2em 10%;
+  width: 80%;
+}
+footer #copyright a img {
+  padding: 0 6px;
+}
+footer #copyright p {
+  display: inline-block;
+}
+footer #callout h3 {
+  font-size: 1.4em;
+  margin-top: .2em;
+  text-transform: uppercase;
+}
+footer #bostonbuilt {
+  float: left;
+  clear: both;
+}
+footer .whitebox {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 3px;
+  margin-bottom: 1em;
+}
+footer .whitebox p,
+footer .whitebox h3 {
+  padding-left: 10px;
+  margin: .2em 0;
+}
+footer .whitebox a {
+  color: #222;
+  text-decoration: underline;
+}
+/*********************
+CURTAIN STYLES
+*********************/
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+.curtains {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.curtains > li {
+  position: relative;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  /*    -webkit-transform:translateZ(0);
+    background: white;
+    display:block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100%;
+    #z-index:1;*/
+}
+.curtains > li.hidden {
+  display: none;
+}
+/*
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's 
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*/
+@media only screen and (min-width: 481px) {
+  /******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection. 
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+  /*********************
+NAVIGATION STYLES
+*********************/
+  header .navbar-inner .container {
+    width: 90%;
+  }
+  #navbar-social {
+    display: inline;
+    float: right;
+    padding: .85em 0;
+  }
+  #navbar-social img {
+    opacity: .35;
+    margin-left: 10px;
+  }
+  #navbar-social img:hover {
+    opacity: .9;
+  }
+  /*********************
+POSTS & CONTENT STYLES
+*********************/
+  .page-template-page-landing-php #main.container {
+    width: 90%;
+  }
+  .blog .pager .previous a,
+  .single .pager .previous a,
+  .category .pager .previous a,
+  .author .pager .previous a,
+  .archive .pager .previous a {
+    float: left;
+  }
+  .blog .pager .next a,
+  .single .pager .next a,
+  .category .pager .next a,
+  .author .pager .next a,
+  .archive .pager .next a {
+    margin-top: 0;
+    float: right;
+  }
+  .home #home h1 {
+    font-size: 3.5em;
+  }
+  .home #slider-code .overview li {
+    width: 270;
+  }
+  .home #process .center {
+    width: 477px;
+  }
+  .home #process .center .bigcircle {
+    width: 180px;
+    height: 180px;
+    border-radius: 90px;
+    margin-left: -35px;
+    line-height: 180px;
+    font-size: 17px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  .home #process .center .bigcircle.first {
+    margin-left: 0;
+  }
+  .home #whoweare #staff-wrapper .fourcol {
+    float: left;
+    width: 48%;
+    margin: .5em 1%;
+  }
+  .home #masters,
+  .home #usability {
+    width: 480px;
+    margin-left: -240px;
+  }
+  .home #masters.blimptext .seventy,
+  .home #usability.blimptext .seventy {
+    font-size: 120px;
+  }
+  .home #masters.blimptext:after,
+  .home #usability.blimptext:after {
+    right: 221px;
+  }
+  .home #usability.blimptext .seventy {
+    line-height: 78px;
+  }
+  /* post content */
+  .post-content {
+    /* at this larger size, we can start to align images */
+  }
+  .post-content .alignleft,
+  .post-content img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+  }
+  .post-content .alignright,
+  .post-content img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+  }
+  .post-content .aligncenter,
+  .post-content img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
+  }
+  /* end .post-content */
+  /*********************
+FOOTER STYLES
+*********************/
+  footer #bostonbuilt {
+    float: right;
+    position: relative;
+    bottom: 4px;
+    clear: none;
+  }
+  footer #copyright p {
+    display: block;
+  }
+  /*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+  /* end .footer-links */
+}
+/*
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and 
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 768px) {
+  /******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+  /* FUTUREM - Landing pages */
+  #header_futurem {
+    height: 340px;
+  }
+  .page-template-page-landing-php #main.container {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  .page-template-page-landing-php #mc_embed_signup {
+    width: 65%;
+  }
+  .landing_split {
+    display: table;
+  }
+  .landing_split .sixcol {
+    width: 50%;
+    margin: 0;
+    display: table-cell;
+  }
+  /* END FUTUREM */
+  /*********************
+GENERAL STYLES
+*********************/
+  /********************
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+  .home .last {
+    float: right;
+  }
+  .home #futurem {
+    display: inline;
+    position: fixed;
+    right: 0;
+    top: 350px;
+    z-index: 9999999999;
+  }
+  .home #home h1 {
+    font-size: 4.1em;
+  }
+  .home #portfolio .grid-item {
+    width: 33.333333333333333333333%;
+  }
+  .home #work h1 {
+    font-size: 4.5em;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .home #logos #client-wrap {
+    /* 30.75%; } /* grid_4  */
+  }
+  .home #logos #client-wrap p {
+    text-align: left;
+    padding-left: 20px;
+  }
+  .home #logos #client-wrap .fourcol {
+    width: 31.491712705%;
+  }
+  .home #process {
+    padding-bottom: 4em;
+  }
+  .home #process .center {
+    width: 720px;
+  }
+  .home #process .center .bigcircle {
+    width: 270px;
+    height: 270px;
+    border-radius: 135px;
+    margin-left: -50px;
+    line-height: 280px;
+    font-size: 20px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  .home #process .center .bigcircle.first {
+    margin-left: 0;
+  }
+  .home #process .center .fourcol {
+    margin-left: 4.762431%;
+    width: 29.491712705%;
+    padding: 0;
+  }
+  .home #process .center .fourcol.first {
+    margin-left: 0;
+  }
+  .home #whoweare #who-wrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .home #whoweare #who-wrapper .sixcol {
+    padding: 0 0 2em 0;
+  }
+  .home #whoweare #staff-wrapper {
+    width: 75%%;
+    margin: 0 12.5%;
+  }
+  .home #whoweare #staff-wrapper .fourcol {
+    width: 30%;
+  }
+  .home #about #grayboxes {
+    height: auto;
+    min-height: 100px;
+  }
+  .home #about #grayboxes .sixcol {
+    margin: 0;
+    margin-left: 0;
+    height: 100%;
+    width: 50%;
+    padding: 3.5em 0;
+  }
+  .home #about #grayboxes #talk h2 {
+    width: 65%;
+  }
+  .home #about #grayboxes .bigcircle {
+    height: 200px;
+    width: 200px;
+  }
+  .home #about #grayboxes #philosophy {
+    padding: 3.5em 0;
+  }
+  .home #about #grayboxes #philosophy h3 {
+    margin-top: 3em;
+  }
+  .home #about #grayboxes #philosophy #circle1 {
+    left: 60px;
+  }
+  .home #stuff ul {
+    width: auto;
+  }
+  /* blog page */
+  /* archive page */
+  /* date archive page */
+  /* replace the number to the corresponding page number */
+  /* search page */
+  /* search result page */
+  /* no results search page */
+  /* individual paged search (i.e. body.search-paged-3) */
+  /* 404 page */
+  /* single post page */
+  /* individual post page by id (i.e. body.postid-73) */
+  /* individual paged single (i.e. body.single-paged-3) */
+  /* attatchment page */
+  /* individual attatchment page (i.e. body.attachmentid-763) */
+  /* style mime type pages */
+  /* author page */
+  /* user nicename (i.e. body.author-samueladams) */
+  /* paged author archives (i.e. body.author-paged-4) for page 4 */
+  /* category page */
+  /* individual category page (i.e. body.category-6) */
+  /* replace the number to the corresponding page number */
+  /* tag page */
+  /* individual tag page (i.e. body.tag-news) */
+  /* replace the number to the corresponding page number */
+  /* custom page template page */
+  /* individual page template (i.e. body.page-template-contact-php */
+  /* replace the number to the corresponding page number */
+  /* replace the number to the corresponding page number */
+  /* if user is logged in */
+  /* paged items like search results or archives */
+  /* individual paged (i.e. body.paged-3) */
+  /*********************
+LAYOUT & GRID STYLES
+*********************/
+  .wrap {
+    max-width: 1140px;
+  }
+  /*
+		This is a combination of the 1140 grid and Twitter Boostrap.
+		I liked 1140 but Boostrap's grid was way more detailed so
+		I merged them together, let's see how this works out.
+		If you want to use 1140, the original values are commented
+		out on each line.
+	*/
+  .onecol {
+    width: 5.801104972%;
+  }
+  /* 4.85%;  } /* grid_1  */
+  .twocol {
+    width: 14.364640883%;
+  }
+  /* 13.45%; } /* grid_2  */
+  .threecol {
+    width: 22.928176794%;
+  }
+  /* 22.05%; } /* grid_3  */
+  .fourcol {
+    width: 31.491712705%;
+  }
+  /* 30.75%; } /* grid_4  */
+  .fivecol {
+    width: 40.055248616%;
+  }
+  /* 39.45%; } /* grid_5  */
+  .sixcol {
+    width: 48.618784527%;
+  }
+  /* 48%;    } /* grid_6  */
+  .sevencol {
+    width: 57.182320438000005%;
+  }
+  /* 56.75%; } /* grid_7  */
+  .eightcol {
+    width: 65.74585634900001%;
+  }
+  /* 65.4%;  } /* grid_8  */
+  .ninecol {
+    width: 74.30939226%;
+  }
+  /* 74.05%; } /* grid_9  */
+  .tencol {
+    width: 82.87292817100001%;
+  }
+  /* 82.7%;  } /* grid_10 */
+  .elevencol {
+    width: 91.436464082%;
+  }
+  /* 91.35%; } /* grid_11 */
+  .twelvecol {
+    width: 99.999999993%;
+  }
+  /* 100%;   } /* grid_12 */
+  /* layout & column defaults */
+  .onecol,
+  .twocol,
+  .threecol,
+  .fourcol,
+  .fivecol,
+  .sixcol,
+  .sevencol,
+  .eightcol,
+  .ninecol,
+  .tencol,
+  .elevencol,
+  .twelvecol {
+    margin-left: 2.762430939%;
+    position: relative;
+    float: left;
+  }
+  .first {
+    margin-left: 0;
+  }
+  .last {
+    float: right;
+  }
+  /*********************
+HEADER SYTLES
+*********************/
+  /*********************
+NAVIGATION STYLES
+*********************/
+  .nav {
+    border: 0;
+    /* end .menu ul li */
+    /* highlight current page */
+    /* end current highlighters */
+  }
+  .nav li {
+    float: left;
+    position: relative;
+    /*
+		plan your menus and drop-downs wisely.
+		*/
+    /* showing sub-menus */
+  }
+  .nav li a {
+    border-bottom: 0;
+    /*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+  }
+  .nav li a:hover,
+  .nav li a:focus {
+    background-color: #dedede;
+  }
+  .nav li ul.sub-menu,
+  .nav li ul.children {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-top: 0;
+    position: absolute;
+    display: none;
+    z-index: 8999;
+    /* highlight sub-menu current page */
+  }
+  .nav li ul.sub-menu li,
+  .nav li ul.children li {
+    /*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+  }
+  .nav li ul.sub-menu li a,
+  .nav li ul.children li a {
+    padding-left: 10px;
+    border-right: 0;
+    display: block;
+    width: 180px;
+    border-bottom: 1px solid #ccc;
+  }
+  .nav li ul.sub-menu li:last-child a,
+  .nav li ul.children li:last-child a {
+    border-bottom: 0;
+  }
+  .nav li:hover ul {
+    top: auto;
+    display: block;
+  }
+  /* end .nav */
+  /*********************
+SIDEBARS & ASIDES
+*********************/
+  .sidebar {
+    margin-top: 2.2em;
+  }
+  .widgettitle {
+    border-bottom: 2px solid #444;
+    margin-bottom: 0.75em;
+  }
+  .widget {
+    padding: 0;
+    margin: 2.2em 0;
+  }
+  .widget ul li {
+    margin-bottom: 0.5em;
+    /* deep nesting */
+  }
+  .widget ul li ul {
+    margin-top: 0.75em;
+    padding-left: 1em;
+  }
+  #text-2 .sixcol.last,
+  #text-2 p.twelvecol.first {
+    display: inline;
+  }
+  #text-2 .wpcf7 .sixcol.first {
+    float: left;
+  }
+  #text-2 .wpcf7 .sixcol.last {
+    float: right;
+  }
+  #text-2 .wpcf7 .sixcol.last p {
+    padding-left: 25%;
+  }
+  #text-2 .wpcf7 .sixcol.last h3 {
+    padding-left: 25%;
+  }
+  #text-2 .wpcf7 .close-contact {
+    right: 5%;
+    top: 28px;
+  }
+  #text-2 .wpcf7 .wpcf7-mail-sent-ok {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    bottom: 10px;
+    left: 38%;
+  }
+  #text-2 .wpcf7 .big-white {
+    font-size: 4em;
+    margin-top: 15px;
+  }
+  /*********************
+FOOTER STYLES
+*********************/
+  footer #copyright,
+  footer #footer-wrap {
+    width: 95%;
+  }
+  footer #footer-wrap {
+    padding: 0 2.5%;
+  }
+  footer #copyright {
+    padding: .2em 2.5%;
+  }
+  /*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+  .footer-links ul li {
+    /* 
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+  }
+  /* end .footer-links */
+}
+/*
+DESKTOP 
+This is the average viewing window. So Desktops, Laptops, and 
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*/
+@media only screen and (min-width: 1030px) {
+  /******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylesheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+  /* FUTUREM */
+  #header_futurem {
+    height: 490px;
+  }
+  #futurem_logo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+  }
+  /* END FUTUREM */
+  .navbar-fixed-top {
+    position: fixed;
+  }
+  .error404 #content {
+    min-height: 300px;
+    padding-top: 200px;
+  }
+  .home #home h1 {
+    font-size: 5.3em;
+  }
+  .home #portfolio .grid-item {
+    width: 25%;
+  }
+  .home #work h1 {
+    font-size: 5em;
+  }
+  .home #work .intro-text {
+    max-width: 60%;
+  }
+  .home #client-wrap {
+    width: 85%;
+    margin: 0 12.5%;
+  }
+  .home #process .center {
+    width: 986px;
+  }
+  .home #process .center.process-text {
+    width: 865px;
+  }
+  .home #process .center .bigcircle {
+    width: 380px;
+    height: 380px;
+    border-radius: 190px;
+    margin-left: -80px;
+    line-height: 380px;
+    font-size: 20px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  .home #process .center .bigcircle.first {
+    margin-left: 0;
+  }
+  .home #whoweare #staff-wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    clear: both;
+  }
+  .home #whoweare #staff-wrapper .fourcol {
+    width: 30.7%;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  .home #whoweare #staff-wrapper .fourcol:after {
+    content: url('/img/staff/bolthover.png');
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 19%;
+  }
+  .home #whoweare #staff-wrapper .fourcol:hover:after {
+    opacity: .8;
+  }
+  .home #about #grayboxes #talk h2 {
+    font-size: 4em;
+  }
+  .home #about #grayboxes #philosophy #circle-wrap {
+    width: 432px;
+    height: 360px;
+  }
+  .home #about #grayboxes #philosophy .bigcircle {
+    height: 240px;
+    width: 240px;
+    line-height: 240px;
+    font-size: 16px;
+  }
+  .home #about #grayboxes #philosophy #circle1 {
+    left: 94.5px;
+  }
+  .home #about #grayboxes #philosophy #circle2,
+  .home #about #grayboxes #philosophy #circle3 {
+    top: 166.8px;
+  }
+  .home #about #grayboxes #philosophy #circle2 {
+    left: 45px;
+  }
+  .home #about #grayboxes #philosophy #circle3 {
+    left: 247.5px;
+  }
+  .blog .navbar-inner .container,
+  .single .navbar-inner .container,
+  .category .navbar-inner .container,
+  .archive .navbar-inner .container {
+    width: 80%;
+  }
+  .blog article header,
+  .single article header,
+  .category article header,
+  .archive article header,
+  .blog article .entry-content,
+  .single article .entry-content,
+  .category article .entry-content,
+  .archive article .entry-content {
+    padding-left: 18px;
+  }
+  .blog #content,
+  .single #content,
+  .category #content,
+  .archive #content {
+    width: 80%;
+    padding: 0 10%;
+    margin-top: 76px;
+  }
+  .blog #posttime,
+  .single #posttime,
+  .category #posttime,
+  .archive #posttime {
+    left: -100px;
+    top: 0px;
+    width: 94px;
+  }
+  .blog #posttime span,
+  .single #posttime span,
+  .category #posttime span,
+  .archive #posttime span {
+    font-size: 65px;
+    line-height: 65px;
+  }
+  .blog #respond,
+  .single #respond,
+  .category #respond,
+  .archive #respond {
+    padding-left: 18px;
+  }
+  .blog #categories-2 h3,
+  .single #categories-2 h3,
+  .category #categories-2 h3,
+  .archive #categories-2 h3 {
+    font-size: 3em;
+  }
+  footer #copyright,
+  footer #footer-wrap {
+    width: 80%;
+    margin: 0 auto;
+  }
+  footer #footer-wrap {
+    padding: 0 10%;
+  }
+  footer #copyright {
+    padding: .2em 10%;
+  }
+  footer #callout {
+    width: 44.055249%;
+  }
+  .home .footer #copyright,
+  .home .footer #footer-wrap {
+    width: 90%;
+  }
+  .home .footer #footer-wrap {
+    padding: 0 5%;
+  }
+  .home .footer #copyright {
+    padding: .2em 5%;
+  }
+  .page-template-work-php #content {
+    margin-top: 76px;
+  }
+}
+/*
+LARGE VIEWING SIZE 
+This is for the larger monitors and possibly full screen viewers.
+*/
+@media only screen and (min-width: 1240px) {
+  /******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+  .win .home #portfolio .grid-item {
+    -webkit-transition: none 0.6s ease-in-out;
+    -moz-transition: none 0.6s ease-in-out;
+    -ms-transition: none 0.6s ease-in-out;
+    -o-transition: none 0.6s ease-in-out;
+    transition: none 0.6s ease-in-out;
+  }
+  .home #home h1 {
+    font-size: 6em;
+    max-width: 1140px;
+  }
+  .home #home .intro-text {
+    max-width: 990px;
+  }
+  .home #work h1 {
+    font-size: 6em;
+  }
+  .home #portfolio .grid-item {
+    width: 20%;
+    -webkit-transition: background-image 0.6s ease-in-out;
+    -moz-transition: background-image 0.6s ease-in-out;
+    -ms-transition: background-image 0.6s ease-in-out;
+    -o-transition: background-image 0.6s ease-in-out;
+    transition: background-image 0.6s ease-in-out;
+  }
+  .home #who-wrapper {
+    max-width: 1140px;
+  }
+  .home #whoweare #staff-wrapper {
+    width: 1140px;
+  }
+  .home #whoweare #staff-wrapper .fourcol {
+    margin: .5em 1.43%;
+  }
+  .home #whoweare #staff-wrapper .fourcol.first {
+    margin-left: 0;
+  }
+  .home #whoweare #staff-wrapper .fourcol.last {
+    margin-right: 0;
+  }
+  .home #whoweare #staff-wrapper .fourcol:after {
+    right: 18.5%;
+  }
+  .home .post-item p,
+  .home #twitter_update_list {
+    max-width: 460px;
+  }
+  footer #footer-wrap,
+  footer #copyright p {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  footer #copyright p {
+    padding: 6px 0;
+  }
+  .container,
+  .home #work h1 {
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .blog #wrap,
+  .single #wrap,
+  .category #wrap,
+  .archive #wrap {
+    width: 90%;
+    margin: 0 5%;
+  }
+  .blog #sidebar,
+  .single #sidebar,
+  .category #sidebar,
+  .archive #sidebar {
+    width: 22%;
+  }
+  .blog .entry-content,
+  .single .entry-content,
+  .category .entry-content,
+  .archive .entry-content {
+    width: 610px;
+  }
+  .page-template-work-php #content,
+  .blog #content,
+  .single #content,
+  .category #content,
+  .archive #content {
+    float: none;
+    max-width: 1140px;
+    margin: 0 auto;
+    margin-top: 76px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+}
+/*
+
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with 
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Retina Screens & Devices Stylesheet
+
+When handling retina screens you need to make adjustments, especially
+if you're not using font icons. Here you can add them in one neat
+place.
+
+******************************************************************/
+  /* 
+
+EXAMPLE 
+Let's say you have an image and you need to make sure it looks ok
+on retina screens. Let's say we have an icon which dimension are
+24px x 24px. In your regular stylesheets, it would look something
+like this:
+
+.icon {
+	width: 24px;
+	height: 24px;
+	background: url(img/test.png) no-repeat;
+}
+
+For retina screens, we have to make some adjustments, so that image
+doesn't look blurry. So, taking into account the image above and the
+dimensions, this is what we would put in our retina stylesheet:
+
+.icon {
+	background: url(img/test@2x.png) no-repeat;
+	background-size: 24px 24px;
+}
+
+So, you would create the same icon, but at double the resolution, meaning 
+it would be 48px x 48px. You'd name it the same, but with a @2x at the end
+(this is pretty standard practice). Set the background image so it matches
+the original dimensions and you are good to go. 
+
+*/
+}
+/*
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*/
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  a,
+  a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+  a:after,
+  a:visited:after {
+    content: " (" attr(href) ")";
+  }
+  a abbr[title]:after,
+  a:visited abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+  .sidebar,
+  .page-navigation,
+  .wp-prev-next,
+  .respond-form,
+  nav {
+    display: none;
+  }
+}

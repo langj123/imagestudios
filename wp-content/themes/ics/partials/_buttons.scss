@@ -1,0 +1,9 @@
+.yellow-button {
+	font-family: $cta-family;
+	padding-left: 25px;
+	padding-right: 25px;
+	color: $bttn-text-color;
+	&:hover {
+		cursor: pointer;
+	}
+}

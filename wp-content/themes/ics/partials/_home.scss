@@ -1,0 +1,183 @@
+.home #main {
+	background: rgba(255, 195, 40, 1);
+	height: auto;
+	position: absolute;
+	top: 0;
+}
+.head-cont h1 span {
+	display: inline-block;
+	min-width: 300px;
+	position: relative;
+	line-height: 72px;
+	&:after {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		content: "";
+		width: 100%;
+		height: 4px;
+		background: #000;
+	}
+}
+.head-cont h1 span:hover, .head-cont h1 span.active {
+	background: black;
+	color: white;
+}
+.home .main-head {
+	height: 100vh;
+	&:before {
+		content: '';
+    	display: inline-block;
+    	height: 100%;
+    	vertical-align: middle;
+	}
+	.head-cont {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0 175px 0 100px;
+	}
+	.head-cont h1 {
+		color: #000;
+		text-align: left;
+		font-size: 75px;
+		line-height: 85px;
+	}
+	.head-cont h2 {
+		color: white;
+		font-size: 24px;
+		text-align: left;
+	}
+}
+.feature-client {
+	height: 100vh;
+	display: flex;
+	justify-content: flex-end;
+	background-size: cover;
+	opacity: 0;
+	@include transition-property(opacity, transform);
+	@include transition-duration(.3s);
+	@include transition-timing-function(steps(4));
+	&.toggled {
+		opacity: 1;
+	}
+	.feat-cont {
+		width: calc(50% - 160px);
+		padding: 0 100px 0 60px;
+		background: #6acbe5;
+		.feat-title {
+			color: white;
+			font-size: 75px;
+			line-height: 88px;
+			position: relative;
+			span {
+				display: inline;
+				box-shadow: inset 0 -4px 0 white;
+			}
+		}
+		.feat-desc {
+			color: white;
+			font-size: 28px;
+		}
+		&:before {
+			content: '';
+    		display: inline-block;
+    		height: 100%;
+    		vertical-align: middle;
+		}
+		.vert-cent {
+			vertical-align: middle;
+			display: inline-block;
+		}
+	}
+}
+/* Individual client sections, based off id. */
+#Feat-new_england_school_of_photography {
+	.feat-cont {
+		@include transform(translateX(100%));
+		@include transition-property(transform);
+		@include transition-duration(.2s);
+	}
+	.feat-cont {
+		&.toggled {
+			@include transform(translateX(0));
+		}
+	}
+}
+#Feat-47_brand {
+	&.feature-client {
+		@include transition-property(opacity, transform);
+		@include transition-duration(.5s);
+		@include transition-timing-function(linear);
+	}
+	.feat-cont {
+		position: relative;
+		background: transparent;
+		padding: 0;
+		width: 50%;
+		text-align: center;
+		.feat-title {
+			margin-top: 0;
+		}
+		.vert-cent {
+			position: relative;
+			text-align: center;
+			width: 420px;
+			padding: 0 40px;
+			z-index: 1;
+			@include transform(scale(0));
+			@include transition-property(transform, opacity);
+			@include transition-duration(.4s);
+			&:after {
+				content: "";
+				background: #3ecc64;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				@include transform(translateY(-50%));
+				border-radius: 100%;
+				width: 500px;
+				height: 500px;
+				background: pink;
+				z-index: -1;
+			}
+		}
+		&.toggled {
+			.vert-cent {
+				@include transform(scale(1));
+			}
+		}
+	}
+}
+#Feat-ginkgo_bioworks {
+	&:before {
+		content: "";
+		position: absolute;
+		background-image: inherit;
+		@include background(linear-gradient(93deg, #2a6575, #23364c));
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+	}
+	&.feature-client {
+		position: relative;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-image: inherit;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 299vw;
+		z-index: 0;
+	}
+	.feat-cont {
+		position: relative;
+		width: 100%;
+		padding: 0;
+		background: transparent;
+		text-align: center;
+		z-index: 2;
+	}
+}

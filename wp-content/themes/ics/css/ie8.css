@@ -1,0 +1,83 @@
+/* Fix the down arrow (no rounded corners */
+#nextarrow {background-color: transparent;}
+.home #plunge a{	color: #fff;}
+
+.bigcircle {background: transparent;}
+
+/* RGBA? NOPE */
+header .navbar-inner {
+	background: #fff;
+}
+
+#navbar-social {
+width: 155px;
+}
+
+/* GRID */
+.home, .home #work {background: #efefef;}
+.home #portfolio .grid-item {
+	width:280px;
+	height: 280px;
+}
+@media only screen and (min-width: 560px) {
+	.home #portfolio {
+		width: 560px;
+	}
+}
+@media only screen and (min-width: 840px) {
+	.home #portfolio {
+		width: 840px;
+	}
+}
+@media only screen and (min-width: 1120px) {
+	.home #portfolio {
+		width: 1120px;
+	}
+}
+@media only screen and (min-width: 1400px) {
+	.home #portfolio {
+		width: 1400px;
+	}
+}
+
+
+@media only screen and (min-width: 481px) {
+	/* Process Circles */
+	.home #process .center .bigcircle {
+		height: auto;
+		line-height:1em;
+	}
+}
+@media only screen and (min-width: 768px) {
+	/* Process Circles */
+	.home #process .center .bigcircle {
+		height: auto;
+		line-height:1em;
+	}
+}
+@media only screen and (min-width: 1030px) {
+	/* Process Circles */
+	.home #process .center .bigcircle {
+		height: auto;
+		line-height:1em;
+	}
+	/* Remove Portrait Bolts */
+	.home #whoweare #staff-wrapper .twocol:after {
+		content: none;
+	}
+}
+
+@media only screen and (min-width: 1240px) {
+	/* Process Circles */
+	.home #process .center .bigcircle {
+		height: auto;
+		line-height:1em;
+	}
+	.home #portfolio {
+		width: 1120px;
+	}
+	.home #portfolio .grid-item {
+  	width:280px;
+  	height: 280px;
+	}
+}

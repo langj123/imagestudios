@@ -1,0 +1,73 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+.win .home #portfolio .grid-item {
+	.transition(none, .6s);
+}
+.home {
+	#home {
+		h1 {
+			font-size: 6em;
+			max-width: 1140px;
+		}
+		.intro-text {max-width: 990px;}
+	}
+	#work {
+		h1 {font-size: 6em;}
+	}
+	#portfolio {
+		.grid-item {
+			width:20%;
+			.transition(background-image,.6s);
+		}
+	}
+	#who-wrapper {
+		max-width: 1140px;
+	}
+	#whoweare #staff-wrapper {
+		width: 1140px;
+		.fourcol {
+			margin: .5em 1.43%;
+			&.first {margin-left: 0;}
+			&.last {margin-right: 0;}
+			&:after {right:18.5%;}
+		}
+	}
+	.post-item p, #twitter_update_list {
+		max-width: 460px;
+	}
+}
+
+footer #footer-wrap, footer #copyright p {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+footer #copyright p {
+	padding: 6px 0;
+}
+.container, .home #work h1 {
+	max-width: 1140px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.blog, .single, .category, .archive {
+	#wrap {width: 90%; margin: 0 5%;}
+	#sidebar {width: 22%;}
+	.entry-content {width:610px;}
+}
+
+.page-template-work-php, .blog, .single, .category, .archive {
+	#content {
+		float: none;
+		max-width: 1140px;
+		margin: 0 auto;
+		margin-top: 76px;
+	}
+}

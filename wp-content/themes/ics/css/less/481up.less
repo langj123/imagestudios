@@ -1,0 +1,134 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection. 
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+
+
+/*********************
+NAVIGATION STYLES
+*********************/
+header {
+	.navbar-inner {
+		.container {width: 90%;}
+	}
+}
+
+#navbar-social {
+	display: inline;
+	float: right;
+	padding: .85em 0;
+	img {opacity: .35; margin-left: 10px;}
+	img:hover {opacity: .9;}
+}
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+.page-template-page-landing-php {
+  #main.container {width: 90%;}
+}
+.blog, .single, .category, .author, .archive {
+  .pager {
+    .previous {
+      a {float: left;}   
+    }
+    .next a {margin-top: 0; float: right;}
+  }
+}
+.home {
+	#home {
+		h1 {
+			font-size: 3.5em;
+		}
+	}
+	#slider-code .overview li {width: 270;}
+	#process {
+		.center {
+      width: 477px;
+      .bigcircle {
+        width: 180px;
+        height: 180px;  
+        border-radius: 90px;
+        margin-left: -35px;
+        line-height: 180px;
+        font-size: 17px;
+        .transition(all, .4s);
+        &.first {margin-left: 0;}
+      }
+    }
+	}
+	#whoweare {
+    #staff-wrapper {
+      .fourcol {
+        float: left;
+        width: 48%;
+        margin: .5em 1%;
+      }
+    }
+	}
+	#masters, #usability {
+		width: 480px;
+		margin-left: -240px;
+		&.blimptext {
+			.seventy {font-size: 120px;}
+			&:after {
+				right: 221px;
+			}
+		}
+	}
+	#usability {
+		&.blimptext .seventy {line-height: 78px;}
+	}
+}
+/* post content */
+.post-content {
+			
+	
+	/* at this larger size, we can start to align images */
+	.alignleft, img.alignleft { 
+		margin-right: 1.5em; 
+		display: inline; 
+		float: left; 
+	}
+	.alignright, img.alignright { 
+		margin-left: 1.5em; 
+		display: inline; 
+		float: right; 
+	}
+	.aligncenter, img.aligncenter { 
+		margin-right: auto; 
+		margin-left: auto; 
+		display: block; 
+		clear: both; 
+	}
+			
+} /* end .post-content */
+
+/*********************
+FOOTER STYLES
+*********************/
+footer {
+	#bostonbuilt {float: right; position: relative; bottom: 4px; clear: none;}
+	#copyright p {display: block;}
+}	
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+.footer-links {
+	ul {
+		li {}
+	}
+} /* end .footer-links */
+			

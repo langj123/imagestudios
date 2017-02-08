@@ -47,3 +47,4 @@ wp-content/plugins/*
 # Ignore everything in the "themes" directory, except the themes you specify
 wp-content/themes/*
 !wp-content/themes/ics/
+wp-content/themes/ics/.DS_Store

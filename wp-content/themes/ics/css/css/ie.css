@@ -1,0 +1,1155 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use LESS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+/*
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't 
+understand (what's inside the media queries). We also need to
+import the mixins file so LESS can understand the variables.
+*/
+/* import mixins */
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of LESS' great features: 
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques like box shadow and
+border-radius.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more. 
+
+******************************************************************/
+/*********************
+CLEARFIXIN'
+*********************/
+/* Contain floats: nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix {
+  /* for IE */
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+/*********************
+TOOLS
+*********************/
+.t {
+  letter-spacing: 4px;
+}
+/* http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ */
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.center {
+  margin: 0 auto;
+  width: auto;
+}
+.facebook img,
+.twitter img,
+.pinterest img,
+.instagram img {
+  background: url(/img/Facebook-black.png);
+  background-repeat: no-repeat;
+  height: 26px;
+  width: 26px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.facebook img:hover,
+.twitter img:hover,
+.pinterest img:hover,
+.instagram img:hover {
+  background: url(/img/Facebook-white.png);
+}
+.twitter img {
+  background: url(/img/Twitter-black.png);
+}
+.twitter img:hover {
+  background: url(/img/Twitter-white.png);
+}
+.pinterest img {
+  background: url(/img/Pinterest-black.png);
+}
+.pinterest img:hover {
+  background: url(/img/Pinterest-white.png);
+}
+.instagram img {
+  background: url(/img/Instagram-black.png);
+}
+.instagram img:hover {
+  background: url(/img/Instagram-white.png);
+}
+#nextarrow {
+  background: #ffc426;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+}
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+.lightgray {
+  background: #efefef;
+}
+.darkgray {
+  background: #666;
+}
+.midgray {
+  background: #757575;
+}
+.black {
+  color: #454545;
+}
+.yellow {
+  color: #ffc426;
+}
+.underline {
+  text-decoration: underline;
+}
+.highlight-color {
+  color: #ffc426;
+}
+/*********************
+SHAPES
+*********************/
+.bigcircle {
+  width: 300px;
+  height: 300px;
+  border-radius: 150px;
+  font-size: 20px;
+  color: #222;
+  line-height: 300px;
+  text-align: center;
+  background: #f2b000;
+  opacity: .7;
+  float: left;
+  margin-left: -50px;
+}
+/*********************
+TYPOGRAPHY
+*********************/
+@font-face {
+  font-family: 'TradeGothicLT-CondEighteen';
+  src: url('/css/webfonts/2895CF_0_0.eot');
+  src: url('/css/webfonts/2895CF_0_0.eot?#iefix') format('embedded-opentype'), url('/css/webfonts/2895CF_0_0.woff') format('woff'), url('/css/webfonts/2895CF_0_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'TradeGothicLTCom-BdCn20';
+  src: url('/css/webfonts/2895CF_1_0.eot');
+  src: url('/css/webfonts/2895CF_1_0.eot?#iefix') format('embedded-opentype'), url('/css/webfonts/2895CF_1_0.woff') format('woff'), url('/css/webfonts/2895CF_1_0.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'TradeGothicLT-Bold';
+  src: url('/css/webfonts/2895CF_2_0.eot');
+  src: url('/css/webfonts/2895CF_2_0.eot?#iefix') format('embedded-opentype'), url('/css/webfonts/2895CF_2_0.woff') format('woff'), url('/css/webfonts/2895CF_2_0.ttf') format('truetype');
+}
+.thirsty {
+  font-family: 'ThirstyScriptRegular', Georgia;
+}
+/* 
+use the best ampersand 
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Baskerville, 'Goudy Old Style', Palatino, 'Book Antiqua', serif;
+  font-style: italic;
+}
+/* text alignment */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+/* alerts & notices */
+.alert {
+  margin: 10px;
+  padding: 5px 18px;
+  border: 1px solid;
+}
+.help {
+  border-color: #e8dc59;
+  background: #ebe16f;
+}
+.info {
+  border-color: #bfe4f4;
+  background: #d5edf8;
+}
+.error {
+  border-color: #f8cdce;
+  background: #fbe3e4;
+}
+.success {
+  border-color: #deeaae;
+  background: #e6efc2;
+}
+/*********************
+BORDER RADIUS
+*********************/
+/* 
+NOTE: For older browser support (and some mobile), 
+don't use the shorthand to define *different* corners. 
+
+USAGE: .rounded(4px); 
+
+*/
+/* 
+Instead of having a seperate mixin for the different
+borders, we're using the mixin from 320 & Up to make
+things easier to use.
+
+USAGE: .border-radius(4px,4px,0,0);
+
+*/
+/*********************
+TRANISTION
+*********************/
+/* .transition(all,2s); */
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can 
+really slow down your CSS. Don't overdue it.
+*********************/
+/* .css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* .boxSizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So 
+probably best not to use it. I mean, were you going to anyway? */
+/*********************
+BOX SHADOW
+*********************/
+/* .boxShadow(0 0 4px #444); */
+/*********************
+BUTTONS
+*********************/
+.yellow-button,
+.yellow-button:visited,
+.pager a,
+.pager a:visited {
+  padding: 12px 12px 12px;
+  font-size: 14px;
+  background: #ffc426;
+  font-family: 'MCMHellenicWide', Georgia;
+  color: #222;
+  text-transform: uppercase;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.yellow-button:hover,
+.yellow-button:visited:hover,
+.pager a:hover,
+.pager a:visited:hover {
+  color: #454545;
+  text-decoration: none;
+  background: #ffd259;
+}
+.ie .yellow-button,
+.ie .yellow-button:visited,
+.win .yellow-button,
+.win .yellow-button:visited,
+.win .pager a,
+.win .pager a:visited {
+  padding-top: 0px;
+}
+.button,
+.button:visited {
+  border: 1px solid #be0d37;
+  border-top-color: #db0f3f;
+  border-left-color: #db0f3f;
+  padding: 4px 12px;
+  color: #fff;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+  margin-bottom: 20px;
+  line-height: 21px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #e40f42;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f01d4f), to(#e40f42));
+  background-image: -webkit-linear-gradient(top, #f01d4f, #e40f42);
+  background-image: -moz-linear-gradient(top, #f01d4f, #e40f42);
+  background-image: -o-linear-gradient(top, #f01d4f, #e40f42);
+  background-image: linear-gradient(to bottom, #f01d4f, #e40f42);
+}
+.button:hover,
+.button:visited:hover,
+.button:focus,
+.button:visited:focus {
+  color: #fff;
+  border: 1px solid #be0d37;
+  border-top-color: #9d0a2d;
+  border-left-color: #9d0a2d;
+  background-color: #cc0e3b;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e40f42), to(#cc0e3b));
+  background-image: -webkit-linear-gradient(top, #e40f42, #cc0e3b);
+  background-image: -moz-linear-gradient(top, #e40f42, #cc0e3b);
+  background-image: -o-linear-gradient(top, #e40f42, #cc0e3b);
+  background-image: linear-gradient(to bottom, #e40f42, #cc0e3b);
+}
+.button:active,
+.button:visited:active {
+  background-color: #f01d4f;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e40f42), to(#f01d4f));
+  background-image: -webkit-linear-gradient(top, #e40f42, #f01d4f);
+  background-image: -moz-linear-gradient(top, #e40f42, #f01d4f);
+  background-image: -o-linear-gradient(top, #e40f42, #f01d4f);
+  background-image: linear-gradient(to bottom, #e40f42, #f01d4f);
+}
+.blue-button,
+.blue-button:visited {
+  border-color: #1472ad;
+  text-shadow: 0 1px 1px #1472ad;
+  background-color: #1681c4;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1990db), to(#1681c4));
+  background-image: -webkit-linear-gradient(top, #1990db, #1681c4);
+  background-image: -moz-linear-gradient(top, #1990db, #1681c4);
+  background-image: -o-linear-gradient(top, #1990db, #1681c4);
+  background-image: linear-gradient(to bottom, #1990db, #1681c4);
+  -webkit-box-shadow: inset 0 0 3px #59b3ec;
+  -moz-box-shadow: inset 0 0 3px #59b3ec;
+  box-shadow: inset 0 0 3px #59b3ec;
+}
+.blue-button:hover,
+.blue-button:visited:hover,
+.blue-button:focus,
+.blue-button:visited:focus {
+  border-color: #116396;
+  background-color: #1472ad;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1784c9), to(#1472ad));
+  background-image: -webkit-linear-gradient(top, #1784c9, #1472ad);
+  background-image: -moz-linear-gradient(top, #1784c9, #1472ad);
+  background-image: -o-linear-gradient(top, #1784c9, #1472ad);
+  background-image: linear-gradient(to bottom, #1784c9, #1472ad);
+}
+.blue-button:active,
+.blue-button:visited:active {
+  background-color: #1990db;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1681c4), to(#1990db));
+  background-image: -webkit-linear-gradient(top, #1681c4, #1990db);
+  background-image: -moz-linear-gradient(top, #1681c4, #1990db);
+  background-image: -o-linear-gradient(top, #1681c4, #1990db);
+  background-image: linear-gradient(to bottom, #1681c4, #1990db);
+}
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to 
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection. 
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+/*********************
+NAVIGATION STYLES
+*********************/
+header .navbar-inner .container {
+  width: 90%;
+}
+#navbar-social {
+  display: inline;
+  float: right;
+  padding: .85em 0;
+}
+#navbar-social img {
+  opacity: .35;
+  margin-left: 10px;
+}
+#navbar-social img:hover {
+  opacity: .9;
+}
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+.page-template-page-landing-php #main.container {
+  width: 90%;
+}
+.blog .pager .previous a,
+.single .pager .previous a,
+.category .pager .previous a,
+.author .pager .previous a,
+.archive .pager .previous a {
+  float: left;
+}
+.blog .pager .next a,
+.single .pager .next a,
+.category .pager .next a,
+.author .pager .next a,
+.archive .pager .next a {
+  margin-top: 0;
+  float: right;
+}
+.home #home h1 {
+  font-size: 3.5em;
+}
+.home #slider-code .overview li {
+  width: 270;
+}
+.home #process .center {
+  width: 477px;
+}
+.home #process .center .bigcircle {
+  width: 180px;
+  height: 180px;
+  border-radius: 90px;
+  margin-left: -35px;
+  line-height: 180px;
+  font-size: 17px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.home #process .center .bigcircle.first {
+  margin-left: 0;
+}
+.home #whoweare #staff-wrapper .fourcol {
+  float: left;
+  width: 48%;
+  margin: .5em 1%;
+}
+.home #masters,
+.home #usability {
+  width: 480px;
+  margin-left: -240px;
+}
+.home #masters.blimptext .seventy,
+.home #usability.blimptext .seventy {
+  font-size: 120px;
+}
+.home #masters.blimptext:after,
+.home #usability.blimptext:after {
+  right: 221px;
+}
+.home #usability.blimptext .seventy {
+  line-height: 78px;
+}
+/* post content */
+.post-content {
+  /* at this larger size, we can start to align images */
+}
+.post-content .alignleft,
+.post-content img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+.post-content .alignright,
+.post-content img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+.post-content .aligncenter,
+.post-content img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+/* end .post-content */
+/*********************
+FOOTER STYLES
+*********************/
+footer #bostonbuilt {
+  float: right;
+  position: relative;
+  bottom: 4px;
+  clear: none;
+}
+footer #copyright p {
+  display: block;
+}
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+/* end .footer-links */
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+/* FUTUREM - Landing pages */
+#header_futurem {
+  height: 340px;
+}
+.page-template-page-landing-php #main.container {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.page-template-page-landing-php #mc_embed_signup {
+  width: 65%;
+}
+.landing_split {
+  display: table;
+}
+.landing_split .sixcol {
+  width: 50%;
+  margin: 0;
+  display: table-cell;
+}
+/* END FUTUREM */
+/*********************
+GENERAL STYLES
+*********************/
+/********************
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+.home .last {
+  float: right;
+}
+.home #futurem {
+  display: inline;
+  position: fixed;
+  right: 0;
+  top: 350px;
+  z-index: 9999999999;
+}
+.home #home h1 {
+  font-size: 4.1em;
+}
+.home #portfolio .grid-item {
+  width: 33.333333333333333333333%;
+}
+.home #work h1 {
+  font-size: 4.5em;
+  width: 90%;
+  margin: 0 auto;
+}
+.home #logos #client-wrap {
+  /* 30.75%; } /* grid_4  */
+}
+.home #logos #client-wrap p {
+  text-align: left;
+  padding-left: 20px;
+}
+.home #logos #client-wrap .fourcol {
+  width: 31.491712705%;
+}
+.home #process {
+  padding-bottom: 4em;
+}
+.home #process .center {
+  width: 720px;
+}
+.home #process .center .bigcircle {
+  width: 270px;
+  height: 270px;
+  border-radius: 135px;
+  margin-left: -50px;
+  line-height: 280px;
+  font-size: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.home #process .center .bigcircle.first {
+  margin-left: 0;
+}
+.home #process .center .fourcol {
+  margin-left: 4.762431%;
+  width: 29.491712705%;
+  padding: 0;
+}
+.home #process .center .fourcol.first {
+  margin-left: 0;
+}
+.home #whoweare #who-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+.home #whoweare #who-wrapper .sixcol {
+  padding: 0 0 2em 0;
+}
+.home #whoweare #staff-wrapper {
+  width: 75%%;
+  margin: 0 12.5%;
+}
+.home #whoweare #staff-wrapper .fourcol {
+  width: 30%;
+}
+.home #about #grayboxes {
+  height: auto;
+  min-height: 100px;
+}
+.home #about #grayboxes .sixcol {
+  margin: 0;
+  margin-left: 0;
+  height: 100%;
+  width: 50%;
+  padding: 3.5em 0;
+}
+.home #about #grayboxes #talk h2 {
+  width: 65%;
+}
+.home #about #grayboxes .bigcircle {
+  height: 200px;
+  width: 200px;
+}
+.home #about #grayboxes #philosophy {
+  padding: 3.5em 0;
+}
+.home #about #grayboxes #philosophy h3 {
+  margin-top: 3em;
+}
+.home #about #grayboxes #philosophy #circle1 {
+  left: 60px;
+}
+.home #stuff ul {
+  width: auto;
+}
+/* blog page */
+/* archive page */
+/* date archive page */
+/* replace the number to the corresponding page number */
+/* search page */
+/* search result page */
+/* no results search page */
+/* individual paged search (i.e. body.search-paged-3) */
+/* 404 page */
+/* single post page */
+/* individual post page by id (i.e. body.postid-73) */
+/* individual paged single (i.e. body.single-paged-3) */
+/* attatchment page */
+/* individual attatchment page (i.e. body.attachmentid-763) */
+/* style mime type pages */
+/* author page */
+/* user nicename (i.e. body.author-samueladams) */
+/* paged author archives (i.e. body.author-paged-4) for page 4 */
+/* category page */
+/* individual category page (i.e. body.category-6) */
+/* replace the number to the corresponding page number */
+/* tag page */
+/* individual tag page (i.e. body.tag-news) */
+/* replace the number to the corresponding page number */
+/* custom page template page */
+/* individual page template (i.e. body.page-template-contact-php */
+/* replace the number to the corresponding page number */
+/* replace the number to the corresponding page number */
+/* if user is logged in */
+/* paged items like search results or archives */
+/* individual paged (i.e. body.paged-3) */
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+.wrap {
+  max-width: 1140px;
+}
+/*
+		This is a combination of the 1140 grid and Twitter Boostrap.
+		I liked 1140 but Boostrap's grid was way more detailed so
+		I merged them together, let's see how this works out.
+		If you want to use 1140, the original values are commented
+		out on each line.
+	*/
+.onecol {
+  width: 5.801104972%;
+}
+/* 4.85%;  } /* grid_1  */
+.twocol {
+  width: 14.364640883%;
+}
+/* 13.45%; } /* grid_2  */
+.threecol {
+  width: 22.928176794%;
+}
+/* 22.05%; } /* grid_3  */
+.fourcol {
+  width: 31.491712705%;
+}
+/* 30.75%; } /* grid_4  */
+.fivecol {
+  width: 40.055248616%;
+}
+/* 39.45%; } /* grid_5  */
+.sixcol {
+  width: 48.618784527%;
+}
+/* 48%;    } /* grid_6  */
+.sevencol {
+  width: 57.182320438000005%;
+}
+/* 56.75%; } /* grid_7  */
+.eightcol {
+  width: 65.74585634900001%;
+}
+/* 65.4%;  } /* grid_8  */
+.ninecol {
+  width: 74.30939226%;
+}
+/* 74.05%; } /* grid_9  */
+.tencol {
+  width: 82.87292817100001%;
+}
+/* 82.7%;  } /* grid_10 */
+.elevencol {
+  width: 91.436464082%;
+}
+/* 91.35%; } /* grid_11 */
+.twelvecol {
+  width: 99.999999993%;
+}
+/* 100%;   } /* grid_12 */
+/* layout & column defaults */
+.onecol,
+.twocol,
+.threecol,
+.fourcol,
+.fivecol,
+.sixcol,
+.sevencol,
+.eightcol,
+.ninecol,
+.tencol,
+.elevencol,
+.twelvecol {
+  margin-left: 2.762430939%;
+  position: relative;
+  float: left;
+}
+.first {
+  margin-left: 0;
+}
+.last {
+  float: right;
+}
+/*********************
+HEADER SYTLES
+*********************/
+/*********************
+NAVIGATION STYLES
+*********************/
+.nav {
+  border: 0;
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */
+}
+.nav li {
+  float: left;
+  position: relative;
+  /*
+		plan your menus and drop-downs wisely.
+		*/
+  /* showing sub-menus */
+}
+.nav li a {
+  border-bottom: 0;
+  /*
+			you can use hover styles here even though this size
+			has the possibility of being a mobile device.
+			*/
+}
+.nav li a:hover,
+.nav li a:focus {
+  background-color: #dedede;
+}
+.nav li ul.sub-menu,
+.nav li ul.children {
+  width: 200px;
+  border: 1px solid #ccc;
+  border-top: 0;
+  position: absolute;
+  display: none;
+  z-index: 8999;
+  /* highlight sub-menu current page */
+}
+.nav li ul.sub-menu li,
+.nav li ul.children li {
+  /*
+				if you need to go deeper, go nuts
+				just remember deeper menus suck
+				for usability. k, bai.
+				*/
+}
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 10px;
+  border-right: 0;
+  display: block;
+  width: 180px;
+  border-bottom: 1px solid #ccc;
+}
+.nav li ul.sub-menu li:last-child a,
+.nav li ul.children li:last-child a {
+  border-bottom: 0;
+}
+.nav li:hover ul {
+  top: auto;
+  display: block;
+}
+/* end .nav */
+/*********************
+SIDEBARS & ASIDES
+*********************/
+.sidebar {
+  margin-top: 2.2em;
+}
+.widgettitle {
+  border-bottom: 2px solid #444;
+  margin-bottom: 0.75em;
+}
+.widget {
+  padding: 0;
+  margin: 2.2em 0;
+}
+.widget ul li {
+  margin-bottom: 0.5em;
+  /* deep nesting */
+}
+.widget ul li ul {
+  margin-top: 0.75em;
+  padding-left: 1em;
+}
+#text-2 .sixcol.last,
+#text-2 p.twelvecol.first {
+  display: inline;
+}
+#text-2 .wpcf7 .sixcol.first {
+  float: left;
+}
+#text-2 .wpcf7 .sixcol.last {
+  float: right;
+}
+#text-2 .wpcf7 .sixcol.last p {
+  padding-left: 25%;
+}
+#text-2 .wpcf7 .sixcol.last h3 {
+  padding-left: 25%;
+}
+#text-2 .wpcf7 .close-contact {
+  right: 5%;
+  top: 28px;
+}
+#text-2 .wpcf7 .wpcf7-mail-sent-ok {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.4);
+  bottom: 10px;
+  left: 38%;
+}
+#text-2 .wpcf7 .big-white {
+  font-size: 4em;
+  margin-top: 15px;
+}
+/*********************
+FOOTER STYLES
+*********************/
+footer #copyright,
+footer #footer-wrap {
+  width: 95%;
+}
+footer #footer-wrap {
+  padding: 0 2.5%;
+}
+footer #copyright {
+  padding: .2em 2.5%;
+}
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+.footer-links ul li {
+  /* 
+			be careful with the depth of your menus.
+			it's very rare to have multi-depth menus in
+			the footer.
+			*/
+}
+/* end .footer-links */
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Desktop Stylesheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop. 
+
+******************************************************************/
+/* FUTUREM */
+#header_futurem {
+  height: 490px;
+}
+#futurem_logo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+/* END FUTUREM */
+.navbar-fixed-top {
+  position: fixed;
+}
+.error404 #content {
+  min-height: 300px;
+  padding-top: 200px;
+}
+.home #home h1 {
+  font-size: 5.3em;
+}
+.home #portfolio .grid-item {
+  width: 25%;
+}
+.home #work h1 {
+  font-size: 5em;
+}
+.home #work .intro-text {
+  max-width: 60%;
+}
+.home #client-wrap {
+  width: 85%;
+  margin: 0 12.5%;
+}
+.home #process .center {
+  width: 986px;
+}
+.home #process .center.process-text {
+  width: 865px;
+}
+.home #process .center .bigcircle {
+  width: 380px;
+  height: 380px;
+  border-radius: 190px;
+  margin-left: -80px;
+  line-height: 380px;
+  font-size: 20px;
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.home #process .center .bigcircle.first {
+  margin-left: 0;
+}
+.home #whoweare #staff-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  clear: both;
+}
+.home #whoweare #staff-wrapper .fourcol {
+  width: 30.7%;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.home #whoweare #staff-wrapper .fourcol:after {
+  content: url('/img/staff/bolthover.png');
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 19%;
+}
+.home #whoweare #staff-wrapper .fourcol:hover:after {
+  opacity: .8;
+}
+.home #about #grayboxes #talk h2 {
+  font-size: 4em;
+}
+.home #about #grayboxes #philosophy #circle-wrap {
+  width: 432px;
+  height: 360px;
+}
+.home #about #grayboxes #philosophy .bigcircle {
+  height: 240px;
+  width: 240px;
+  line-height: 240px;
+  font-size: 16px;
+}
+.home #about #grayboxes #philosophy #circle1 {
+  left: 94.5px;
+}
+.home #about #grayboxes #philosophy #circle2,
+.home #about #grayboxes #philosophy #circle3 {
+  top: 166.8px;
+}
+.home #about #grayboxes #philosophy #circle2 {
+  left: 45px;
+}
+.home #about #grayboxes #philosophy #circle3 {
+  left: 247.5px;
+}
+.blog .navbar-inner .container,
+.single .navbar-inner .container,
+.category .navbar-inner .container,
+.archive .navbar-inner .container {
+  width: 80%;
+}
+.blog article header,
+.single article header,
+.category article header,
+.archive article header,
+.blog article .entry-content,
+.single article .entry-content,
+.category article .entry-content,
+.archive article .entry-content {
+  padding-left: 18px;
+}
+.blog #content,
+.single #content,
+.category #content,
+.archive #content {
+  width: 80%;
+  padding: 0 10%;
+  margin-top: 76px;
+}
+.blog #posttime,
+.single #posttime,
+.category #posttime,
+.archive #posttime {
+  left: -100px;
+  top: 0px;
+  width: 94px;
+}
+.blog #posttime span,
+.single #posttime span,
+.category #posttime span,
+.archive #posttime span {
+  font-size: 65px;
+  line-height: 65px;
+}
+.blog #respond,
+.single #respond,
+.category #respond,
+.archive #respond {
+  padding-left: 18px;
+}
+.blog #categories-2 h3,
+.single #categories-2 h3,
+.category #categories-2 h3,
+.archive #categories-2 h3 {
+  font-size: 3em;
+}
+footer #copyright,
+footer #footer-wrap {
+  width: 80%;
+  margin: 0 auto;
+}
+footer #footer-wrap {
+  padding: 0 10%;
+}
+footer #copyright {
+  padding: .2em 10%;
+}
+footer #callout {
+  width: 44.055249%;
+}
+.home .footer #copyright,
+.home .footer #footer-wrap {
+  width: 90%;
+}
+.home .footer #footer-wrap {
+  padding: 0 5%;
+}
+.home .footer #copyright {
+  padding: .2em 5%;
+}
+.page-template-work-php #content {
+  margin-top: 76px;
+}
+/* 
+you can call the larger styles if you want, but there's really no need 
+*/
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/

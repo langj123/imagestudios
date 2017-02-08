@@ -1,0 +1,49 @@
+body.page-template-page-contact {
+  height: auto;
+}
+.page-template-page-contact .entry-content  {
+	  max-width: 755px;
+    margin: 2.25vh auto;
+    padding: 0 0 5vh;
+    @include clear-float();
+    @media screen and (max-width: $mobile-break) {
+      padding: 0 5vw;
+    }
+    h3 {
+    	font-family: $header-font-family;
+    	color: $cat-link-color;
+    	text-transform: none;
+    	font-size: $font-size * 1.85;
+    	margin: 5vh 0;
+    	padding-top: 33px;
+      line-height: 42px;
+    	-webkit-font-smoothing: antialiased;
+    	-moz-font-smoothing: antialiased;
+    	-o-font-smoothing: antialiased;
+  	}
+  	p {
+    	line-height: $line-height;
+    	font-size: $font-size;
+    	margin: 2vh auto;
+    	font-family: $body-font-family;
+    	font-weight: 300;
+    	letter-spacing: .5px;
+    	color: $body-color;
+  	}
+  	.w50 {
+    	width: calc(50% - 10px);
+    	float: left;
+    	margin: 0 10px 10px 0;
+  	}
+  	.w50:nth-of-type(even) {
+    	margin: 0 0 10px 10px;
+  	}
+    form {
+      h3:first-of-type {
+        @media screen and (max-width: $mobile-break) {
+          margin-top: 0;
+          padding-top: 0;
+        }
+      }
+    }
+}
