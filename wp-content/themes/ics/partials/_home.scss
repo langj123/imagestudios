@@ -25,6 +25,7 @@
 }
 .home .main-head {
 	height: 100vh;
+	position: relative;
 	&:before {
 		content: '';
     	display: inline-block;
@@ -32,6 +33,7 @@
     	vertical-align: middle;
 	}
 	.head-cont {
+		z-index: 2;
 		display: inline-block;
 		vertical-align: middle;
 		padding: 0 175px 0 100px;
@@ -43,10 +45,58 @@
 		line-height: 85px;
 	}
 	.head-cont h2 {
+		position: relative;
 		color: white;
 		font-size: 24px;
+		font-family: 'AvenirNextLTW01-Regular';
 		text-align: left;
+		display: inline-block;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			background: white;
+			bottom: 1px;
+			left: 0;
+		}
 	}
+	h3 {
+		text-align: center;
+		position: absolute;
+		font-size: 21px;
+		text-decoration: underline;
+		color: black;
+		margin: 0;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, -80px);
+		font-family: 'AvenirNextLTW01-Regular';
+		span {
+			position: relative;
+			z-index: 1;
+		}
+		&:before {
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 78px;
+			left: 0;
+			background: url(../../img/shape-arrow.svg) no-repeat center center / contain;
+			z-index: 0;
+		}
+	}
+}
+img.shapes {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	cursor: pointer;
+	display: block;
+	max-width: 150px;
+	width: 100%;
+	height: auto;
 }
 .feature-client {
 	height: 100vh;
@@ -77,6 +127,7 @@
 		.feat-desc {
 			color: white;
 			font-size: 28px;
+			font-family: 'Tisa W01 Regular';
 		}
 		&:before {
 			content: '';
@@ -137,7 +188,6 @@
 				border-radius: 100%;
 				width: 500px;
 				height: 500px;
-				background: pink;
 				z-index: -1;
 			}
 		}

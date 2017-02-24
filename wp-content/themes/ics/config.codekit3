@@ -1094,6 +1094,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"\/css\/style-min.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/style-min-min.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/css\/style.css": {
 		"aP": 0,
 		"bl": 0,
@@ -2976,6 +2986,96 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/img\/shape-arrow.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/shape-arrow.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/shape-bolt.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/shape-bolt.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/shape-circle-w.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/shape-circle-w.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/shape-circle.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/shape-circle.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/shape-diamond.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/shape-diamond.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/shape-star.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/shape-star.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/shape-triangle-w.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/shape-triangle-w.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/shape-triangle.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/shape-triangle.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/shape-waves.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/shape-waves.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/img\/smallBolt.png": {
 		"ft": 32768,
 		"iS": 1369,
@@ -3274,6 +3374,15 @@
 		"oAP": "\/index.php",
 		"oF": 0
 		},
+	"\/js\/_plugins\/ThrowProps.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/_plugins\/min\/ThrowProps-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/js\/blog.js": {
 		"ft": 64,
 		"mi": 1,
@@ -3324,6 +3433,15 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/min\/home-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/js\/ics-fonts-try.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/js\/min\/ics-fonts-try-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -3441,33 +3559,6 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/js\/min\/plugins-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/js\/tc-ie8.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/js\/min\/tc-ie8-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/js\/tc.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/js\/min\/tc-min.js",
-		"oF": 0,
-		"sC": 1,
-		"tS": 0
-		},
-	"\/js\/type-kit.js": {
-		"ft": 64,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "\/js\/min\/type-kit-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -3956,18 +4047,6 @@
 		"pME": 1,
 		"rFN": 0,
 		"uCM": 0
-		},
-	"\/sass\/.sass-cache\/7593df896de6c3c606a7d8143986d670c1af435e\/screen.scssc": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/sass\/.sass-cache\/7593df896de6c3c606a7d8143986d670c1af435e\/screen.scssc",
-		"oF": 0
-		},
-	"\/sass\/.sass-cache\/f1bbb1b96a76fef6bf4627b4b057fc69b4f91093\/_variables.scssc": {
-		"ft": 8192,
-		"oA": 1,
-		"oAP": "\/sass\/.sass-cache\/f1bbb1b96a76fef6bf4627b4b057fc69b4f91093\/_variables.scssc",
-		"oF": 0
 		},
 	"\/sass\/home-updates.scss": {
 		"aP": 0,

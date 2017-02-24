@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #231f20;
+      }
+    </style>
+  </defs>
+  <title>shape-circle</title>
+  <polygon class="cls-1" points="72 30 42 30 42 0 30 0 30 30 0 30 0 42 30 42 30 72 42 72 42 42 72 42 72 30"/>
+</svg>

@@ -2,17 +2,50 @@ window.addEventListener('load', function(){
 	// variables from localized script,
 	libs = libs.split(',');
 
-	var spans = document.querySelectorAll('.head-cont h1 span');
+	var spans = document.querySelectorAll('.head-cont h1 span'),
+		section = document.getElementsByTagName('section'),
 		sect1 = document.getElementById('Feat-new_england_school_of_photography'),
 		sect2 = document.getElementById('Feat-47_brand'),
 		sect3 = document.getElementById('Feat-ginkgo_bioworks'),
+		spins = document.getElementsByClassName('spin'),
+		rotate = 0,
 		tl = new TimelineLite();
 
 	for (x = 0; x < spans.length; x++) {
 		spans[x].addEventListener('mouseover', function(){
 			this.innerText = libsWheel(this);
-			console.log(this);
 		});
+	}
+
+	for(var i = 0, length1 = section.length; i < length1; i++){
+ 		if (section[i].className.indexOf("section-") != -1) {
+ 			var sImgs = section[i].getElementsByTagName('img'),
+ 				s = section[i],
+ 				sWidth = s.offsetWidth,
+ 				sHeight = s.offsetHeight;
+
+ 			for(var x = 0, length2 = sImgs.length; x < length2; x++){
+ 				if (sImgs[x].className.indexOf("shapes") != -1) {
+ 				var iHeight = sImgs[x].height,
+ 					iWidth = sImgs[x].width,
+ 					rY = (Math.random() * sHeight) > iHeight ? (Math.random() * sHeight) : (Math.random() * sHeight) - iHeight,
+					rX = (Math.random() * sWidth) > iWidth ? (Math.random() * sWidth) : (Math.random() * sWidth) - iWidth;
+
+ 					TweenLite.to(sImgs[x], .3,{left: rX, top: rY, opacity: 1 });
+					Draggable.create(sImgs[x], {type:"top,left", edgeResistance:0.5, bounds: s, throwProps:true});
+				}
+ 			}
+ 		}
+ 	}
+
+ 	// random spins
+	if (spins.length > 0) {
+		var timer = setInterval(function(){
+			for(var i = 0, length1 = spins.length; i < length1; i++){
+				TweenLite.to(spins[i], 15, {rotation:rotate, transformOrigin:"50% 50%", ease:Linear.easeNone});
+			}
+			rotate++;
+		}, 20);
 	}
 
 	window.addEventListener('scroll', function(){
@@ -81,7 +114,7 @@ window.addEventListener('load', function(){
 					elem.classList = '';
 					return;
 				}
-		}, 85);
+		}, 40);
 
 		classCheck(elem, 'active');
 
